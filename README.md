@@ -1,14 +1,9 @@
 # About Me:
 I'm currently pursuing my Master's degree.
-
 I'm looking to collaborate on: Projects involving Applied AI, Machine Learning, or innovative data-driven solutions.
-
 I'm looking for help with: Advanced analytics and strengthening my skills in applied AI systems.
-
 I'm currently learning: Advanced computing and applied AI as part of my Master of Applied Computing at the University of Windsor.
-
 Ask me about: NLP-based document automation, backend development with Node.js and REST APIs, or time-series forecasting using the SARIMAX algorithm.
-
 Fun fact: I speak four languages — English, Hindi, Gujarati, and Sanskrit — and have built everything from an AI-powered resume extractor to a CNN-based plant disease detection system with over 96% accuracy
 
 ## Socials:
