@@ -1,6 +1,10 @@
 # About Me:
-I’m currently pursuing my Master's degree.<br> I’m looking to collaborate on: Projects involving Applied AI, Machine Learning, or innovative data-driven solutions.<br> I’m looking for help with: Advanced analytics and strengthening my skills in applied AI systems.<br> I’m currently learning: Advanced computing and applied AI as part of my Master of Applied Computing at the University of Windsor.<br>  Ask me about: NLP-based automation, full-stack development with Node.js and AngularJS, or stock market forecasting using the SARIMAX algorithm.<br>  Fun fact: I have a background in Sanskrit and have successfully built everything from an AI-powered resume extractor to billing augmentation systems.
-
+I'm currently pursuing my Master's degree.
+I'm looking to collaborate on: Projects involving Applied AI, Machine Learning, or innovative data-driven solutions.
+I'm looking for help with: Advanced analytics and strengthening my skills in applied AI systems.
+I'm currently learning: Advanced computing and applied AI as part of my Master of Applied Computing at the University of Windsor.
+Ask me about: NLP-based document automation, backend development with Node.js and REST APIs, or time-series forecasting using the SARIMAX algorithm.
+Fun fact: I speak four languages — English, Hindi, Gujarati, and Sanskrit — and have built everything from an AI-powered resume extractor to a CNN-based plant disease detection system with over 96% accuracy
 
 ## Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bhavya-patel-data/)
