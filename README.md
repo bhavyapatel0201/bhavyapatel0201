@@ -1,158 +1,121 @@
-<div align="center">
+<!-- Banner -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:7B2FF7&height=190&section=header&text=Bhavya%20Patel&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=AI%20%2F%20ML%20%C2%B7%20Data%20Engineering%20%C2%B7%20Systems&descSize=18&descAlignY=58" alt="Bhavya Patel banner" width="100%" />
+</p>
 
-# Bhavya Patel | Portfolio
+<!-- Typing animation -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1200&center=true&vCenter=true&width=640&lines=Master+of+Applied+Computing+%7C+University+of+Windsor;Building+applied+AI+and+data-driven+systems;NLP+document+automation+%26+computer+vision;Data+warehousing+and+query+optimization" alt="Rotating summary of my focus areas" />
+</p>
 
-A responsive, interactive 3D portfolio built with **React** and an **ASP.NET Core (C#)** backend.
+<!-- Badges -->
+<p align="center">
+  <a href="https://bhavyapatel0201.github.io"><img src="https://img.shields.io/badge/Portfolio-Visit-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://linkedin.com/in/bhavya-patel-data"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <img src="https://img.shields.io/badge/Open%20to-Co--op%20Jan%202027-2EA043?style=for-the-badge" alt="Open to co-op January 2027" />
+</p>
 
-[![Live site](https://img.shields.io/badge/Live%20site-bhavyapatel0201.github.io-3A4FE8?style=for-the-badge&logo=githubpages&logoColor=white)](https://bhavyapatel0201.github.io/)
-
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET%208-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white)
-
-</div>
+<!-- Quick navigation -->
+<p align="center">
+  <a href="#about">About</a> ·
+  <a href="#projects">Projects</a> ·
+  <a href="#skills">Skills</a> ·
+  <a href="#activity">Activity</a> ·
+  <a href="#contact">Contact</a>
+</p>
 
 ---
 
-## Overview
+<a id="about"></a>
+## 👤 About
 
-This is my personal portfolio. The React frontend shows my projects, skills and contact form, and the ASP.NET Core Web API serves the project and skill data and handles contact messages. If the API is unreachable, the frontend falls back to local data, so the site still works when hosted statically.
+I'm a Master of Applied Computing student at the **University of Windsor**, building applied AI and data-driven systems, from cleaning data and training models to putting them behind an interface.
 
-## Features
-
-- **3D hero scene** built with Three.js: a glowing core, orbit rings, floating shards that react to the cursor, and a particle field that responds to scrolling
-- **Responsive layout** tested from 375px phones to 1440px desktops, with a mobile menu and fluid typography
-- **Dark and light themes** that follow the system setting and remember the visitor's choice
-- **Interactive projects**: tag filters, 3D tilt cards and a details modal
-- **Contact form** with validation, rate limiting and email delivery through the API
-- **Accessible by design**: semantic HTML, keyboard focus states, WCAG AA contrast and reduced-motion support
-- **REST API** with Swagger documentation, validation, global error handling and unit tests
-
-## Tech stack
-
-| Layer | Technology |
+| | |
 |---|---|
-| Frontend | React 18, Vite, TypeScript, React Router, Tailwind CSS, Framer Motion |
-| 3D | Three.js with `@react-three/fiber` and `@react-three/drei` |
-| Backend | ASP.NET Core Web API on .NET 8, C# |
-| Data | Entity Framework Core with SQLite |
-| Validation and tests | FluentValidation, xUnit |
-| Hosting | GitHub Pages (frontend), Azure App Service or Render (API) |
+| 📍 **Based in** | Windsor, ON, Canada |
+| 🔭 **Currently working on** | Workload-aware query optimization on PostgreSQL ([Adaptive-Warehouse](https://github.com/bhavyapatel0201/Adaptive-Warehouse)) and fraud detection on imbalanced data ([Credit-Card-Fraud-Detection](https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection)) |
+| 🎯 **Looking for** | Co-op / internship roles starting **January 2027** in AI/ML and data engineering |
+| 💬 **Ask me about** | NLP document automation, time-series forecasting (SARIMAX), computer vision, data warehousing |
+| 🗣️ **Languages** | English, Hindi, Gujarati, Sanskrit |
 
-## Project structure
+---
 
-```
-portfolio/
-├── client/                 # React app (Vite + TypeScript)
-│   ├── src/
-│   │   ├── components/     # UI sections and the 3D scene
-│   │   ├── data/           # Fallback content used if the API is down
-│   │   ├── lib/            # Typed API client
-│   │   └── styles/         # Design tokens and global styles
-│   └── .env.example
-├── server/                 # ASP.NET Core Web API
-│   ├── Controllers/        # HTTP endpoints
-│   ├── Services/           # Business logic (contact, email)
-│   ├── Data/               # DbContext, migrations, seed data
-│   ├── Models/             # Entities and DTOs
-│   └── appsettings.json
-├── server.Tests/           # xUnit tests
-└── README.md
-```
+<a id="projects"></a>
+## 🚀 Projects
 
-## Getting started
-
-### Prerequisites
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download) (`dotnet --version`)
-- [Node.js LTS](https://nodejs.org/) (`node --version`)
-- Git
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/bhavyapatel0201/portfolio.git
-cd portfolio
-```
-
-### 2. Run the API
-
-```bash
-cd server
-dotnet restore
-dotnet ef database update      # creates and seeds the SQLite database
-dotnet run
-```
-
-The console prints the local URL. Swagger is available at `/swagger`.
-
-To enable contact-form emails, store your SMTP settings in user secrets. Never commit them.
-
-```bash
-dotnet user-secrets set "Smtp:Host" "smtp.example.com"
-dotnet user-secrets set "Smtp:Port" "587"
-dotnet user-secrets set "Smtp:Username" "your-username"
-dotnet user-secrets set "Smtp:Password" "your-password"
-dotnet user-secrets set "Contact:Recipient" "you@example.com"
-```
-
-### 3. Run the frontend
-
-In a second terminal:
-
-```bash
-cd client
-npm install
-cp .env.example .env           # then set VITE_API_URL to the URL the API printed
-npm run dev
-```
-
-Open the address that Vite prints, usually `http://localhost:5173`.
-
-## Configuration
-
-| Variable | Where | Purpose |
+| Project | What it does | Stack |
 |---|---|---|
-| `VITE_API_URL` | `client/.env` | Base URL of the API |
-| `Cors:AllowedOrigin` | `server/appsettings.json` | Frontend origin allowed to call the API |
-| `Smtp:*`, `Contact:Recipient` | user secrets or environment variables | Email delivery for the contact form |
+| [**Credit Card Fraud Detection**](https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection) | Classifies fraudulent transactions on highly imbalanced data | Python, scikit-learn, Jupyter |
+| [**Adaptive Sales Data Warehouse**](https://github.com/bhavyapatel0201/Adaptive-Warehouse) | Tests whether workload-aware index and partition tuning beats a static design as query patterns shift | PostgreSQL, Python |
+| [**Resume Extractor**](https://github.com/bhavyapatel0201/ResumeExtractor) | NLP pipeline that pulls skills, education and experience out of resumes | Python, NLP |
+| [**Transfer Learning Object Classification**](https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification) | Image classification with pretrained CNNs | Python, deep learning |
+| [**Stereo Matching & Epipolar Geometry**](https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry) | Camera calibration, epipolar geometry and stereo reconstruction | Python, OpenCV |
 
-## API
+<details>
+<summary><b>More things I've built</b> (click to expand)</summary>
+<br/>
 
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/projects` | List projects, with an optional `?tag=` filter |
-| GET | `/api/projects/{id}` | Get one project |
-| GET | `/api/skills` | List skills by category |
-| POST | `/api/contact` | Submit a contact message (validated and rate limited) |
-| GET | `/api/health` | Health check |
+- 🌿 **Plant disease detection:** CNN classifier for plant leaf images, reaching 96%+ accuracy
+- 📈 **Time-series forecasting:** SARIMAX model that handles seasonality and external variables
+- 🔌 **Backend services:** REST APIs built with Node.js
 
-## Testing
+</details>
 
-```bash
-dotnet test server.Tests
-```
+---
 
-## Deployment
+<a id="skills"></a>
+## 🛠️ Skills
 
-- **Frontend:** a GitHub Actions workflow builds `client/` and publishes it to GitHub Pages. In the repository settings, set Pages to deploy from GitHub Actions.
-- **API:** publish `server/` to Azure App Service or Render, set the environment variables above, then point `VITE_API_URL` at the deployed API and allow the Pages origin in `Cors:AllowedOrigin`.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&perline=6&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&perline=6&theme=light" alt="Skills" />
+  </picture>
+</p>
 
-## Roadmap
+<details open>
+<summary><b>By area</b></summary>
+<br/>
 
-- [ ] Add detailed case studies for each project
-- [ ] Add a blog section
-- [ ] Add analytics that respect visitor privacy
+| Area | Tools |
+|---|---|
+| **Languages** | Python, SQL, JavaScript |
+| **AI / ML** | TensorFlow, scikit-learn, OpenCV, NLP, transfer learning, time-series forecasting |
+| **Data** | Pandas, PostgreSQL, ETL, data warehousing, query optimization |
+| **Backend** | Node.js, Django, REST APIs, Docker |
+| **Systems & tools** | Linux / Unix programming, Git |
 
-## Contact
+</details>
 
-- Portfolio: [bhavyapatel0201.github.io](https://bhavyapatel0201.github.io/)
-- LinkedIn: [bhavya-patel-data](https://www.linkedin.com/in/bhavya-patel-data/)
-- GitHub: [@bhavyapatel0201](https://github.com/bhavyapatel0201)
+---
 
-## License
+<a id="activity"></a>
+## 📈 GitHub activity
 
-Released under the MIT License. See `LICENSE` for details.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=bhavyapatel0201&show_icons=true&hide_border=true&theme=tokyonight" />
+    <img src="https://github-readme-stats.vercel.app/api?username=bhavyapatel0201&show_icons=true&hide_border=true" alt="GitHub stats" width="48%" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=bhavyapatel0201&layout=compact&hide_border=true&theme=tokyonight" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bhavyapatel0201&layout=compact&hide_border=true" alt="Most used languages" width="48%" />
+  </picture>
+</p>
+
+---
+
+<a id="contact"></a>
+## 📫 Let's connect
+
+I'm looking for a co-op or internship starting **January 2027**. The best way to reach me is through LinkedIn or my portfolio.
+
+<p align="center">
+  <a href="https://linkedin.com/in/bhavya-patel-data"><img src="https://img.shields.io/badge/LinkedIn-bhavya--patel--data-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://bhavyapatel0201.github.io"><img src="https://img.shields.io/badge/Portfolio-bhavyapatel0201.github.io-7B2FF7?style=for-the-badge" alt="Portfolio" /></a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7B2FF7,100:0A66C2&height=110&section=footer" alt="" width="100%" />
+</p>
