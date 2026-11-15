@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0A66C2,100:7B2FF7&amp;height=200&amp;section=header&amp;text=Bhavya%20Patel&amp;fontSize=46&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=36&amp;desc=AI%20%2F%20ML%20%C2%B7%20Data%20Engineering%20%C2%B7%20Systems&amp;descSize=18&amp;descAlignY=58" alt="Bhavya Patel" width="100%" />
 </p>
 
@@ -23,6 +23,10 @@
 ---
 
 <a id="about"></a>
+## Screenshots
+
+![Dashboard](docs/dashboard.png)
+
 ## 👋 About me
 
 I'm a Master of Applied Computing student at the **University of Windsor**. I build applied AI and data-driven systems, from cleaning data and training models to putting them behind an interface.
