@@ -13,11 +13,11 @@
 </p>
 
 <p align="center">
-  <a href="#about">About</a> &nbsp;·&nbsp;
-  <a href="#focus">Focus</a> &nbsp;·&nbsp;
-  <a href="#projects">Projects</a> &nbsp;·&nbsp;
-  <a href="#skills">Skills</a> &nbsp;·&nbsp;
-  <a href="#contact">Contact</a>
+  <a href="#about"><img src="https://img.shields.io/badge/About-334155?style=flat-square" alt="About" /></a>
+  <a href="#focus"><img src="https://img.shields.io/badge/Focus-334155?style=flat-square" alt="Focus" /></a>
+  <a href="#projects"><img src="https://img.shields.io/badge/Projects-334155?style=flat-square" alt="Projects" /></a>
+  <a href="#skills"><img src="https://img.shields.io/badge/Skills-334155?style=flat-square" alt="Skills" /></a>
+  <a href="#contact"><img src="https://img.shields.io/badge/Contact-334155?style=flat-square" alt="Contact" /></a>
 </p>
 
 <p align="center">
