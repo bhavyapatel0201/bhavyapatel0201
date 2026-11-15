@@ -90,10 +90,7 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 ## 🛠️ Skills
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&amp;perline=6&amp;theme=dark" />
-    <img src="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&amp;perline=6&amp;theme=light" alt="Python, JavaScript, Node.js, TensorFlow, scikit-learn, OpenCV, Pandas, PostgreSQL, Django, Docker, Git, Linux" />
-  </picture>
+  <img src="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&perline=6" alt="Python, JavaScript, Node.js, TensorFlow, scikit-learn, OpenCV, Pandas, PostgreSQL, Django, Docker, Git, Linux" width="320" />
 </p>
 
 <details open>
