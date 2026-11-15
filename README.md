@@ -23,9 +23,6 @@
 ---
 
 <a id="about"></a>
-## Screenshots
-
-![Dashboard](docs/dashboard.png)
 
 ## 👋 About me
 
