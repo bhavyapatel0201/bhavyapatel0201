@@ -20,11 +20,6 @@
   <a href="#contact"><img src="https://img.shields.io/badge/Contact-334155?style=flat-square" alt="Contact" /></a>
 </p>
 
-<p align="center">
-  <img src="assets/laptop.svg" alt="Animated laptop with lines of code being typed" width="300" />
-  <img src="assets/bars.svg" alt="Animated bar chart where one bar spikes past a threshold line" width="300" />
-</p>
-
 ---
 
 <a id="about"></a>
