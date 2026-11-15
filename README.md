@@ -30,7 +30,7 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 | | |
 |---|---|
 | 📍 **Based in** | Windsor, ON, Canada |
-| 🔭 **Currently working on** | Workload-aware query optimization on PostgreSQL ([Adaptive-Warehouse](https://github.com/bhavyapatel0201/Adaptive-Warehouse)) and fraud detection on imbalanced data ([Credit-Card-Fraud-Detection](https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection)) |
+| 🎓 **Currently pursuing** | Master of Applied Computing at the **University of Windsor** |
 | 🎯 **Looking for** | Co-op / internship roles starting **January 2027** in AI/ML and data engineering |
 | 💬 **Ask me about** | NLP document automation, time-series forecasting (SARIMAX), computer vision, data warehousing |
 | 🗣️ **Languages** | English, Hindi, Gujarati, Sanskrit |
@@ -90,7 +90,7 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 ## 🛠️ Skills
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,nodejs,tensorflow,sklearn,opencv,pandas,postgres,django,docker,git,linux&perline=6" alt="Python, JavaScript, Node.js, TensorFlow, scikit-learn, OpenCV, Pandas, PostgreSQL, Django, Docker, Git, Linux" width="320" />
+  <img src="https://skillicons.dev/icons?i=python,js,html,css,bash,nodejs,flask,fastapi,django,tensorflow,sklearn,opencv,numpy,pandas,matplotlib,postgres,docker,git,github,linux,vscode&perline=7" alt="Python, JavaScript, HTML, CSS, Bash, Node.js, Flask, FastAPI, Django, TensorFlow, scikit-learn, OpenCV, NumPy, Pandas, Matplotlib, PostgreSQL, Docker, Git, GitHub, Linux, VS Code" />
 </p>
 
 <details open>
@@ -100,11 +100,11 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 
 | Area | Tools |
 |---|---|
-| **Languages** | Python, SQL, JavaScript |
-| **AI / ML** | TensorFlow, scikit-learn, OpenCV, NLP, transfer learning, time-series forecasting |
-| **Data** | Pandas, PostgreSQL, ETL, data warehousing, query optimization |
-| **Backend** | Node.js, Django, REST APIs, Docker |
-| **Systems & tools** | Linux / Unix programming, Git |
+| **Languages** | Python, SQL, JavaScript, HTML / CSS, Bash |
+| **AI / ML** | TensorFlow, scikit-learn, XGBoost, OpenCV, spaCy, NLTK, transfer learning, time-series forecasting (SARIMAX) |
+| **Data** | Pandas, NumPy, Matplotlib, Seaborn, PostgreSQL, ETL, data warehousing, query optimization |
+| **Backend** | Node.js, Flask, FastAPI, Django, REST APIs, Docker |
+| **Tools** | Git, GitHub, Jupyter, VS Code, Linux / Unix programming |
 
 </details>
 
