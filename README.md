@@ -89,24 +89,15 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 <a id="skills"></a>
 ## 🛠️ Skills
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,html,css,bash,nodejs,flask,fastapi,django,tensorflow,sklearn,opencv,numpy,pandas,matplotlib,postgres,docker,git,github,linux,vscode&perline=7" alt="Python, JavaScript, HTML, CSS, Bash, Node.js, Flask, FastAPI, Django, TensorFlow, scikit-learn, OpenCV, NumPy, Pandas, Matplotlib, PostgreSQL, Docker, Git, GitHub, Linux, VS Code" />
-</p>
-
-<details open>
-<summary><b>By area</b></summary>
-
-<br/>
-
 | Area | Tools |
-|---|---|
-| **Languages** | Python, SQL, JavaScript, HTML / CSS, Bash |
-| **AI / ML** | TensorFlow, scikit-learn, XGBoost, OpenCV, spaCy, NLTK, transfer learning, time-series forecasting (SARIMAX) |
-| **Data** | Pandas, NumPy, Matplotlib, Seaborn, PostgreSQL, ETL, data warehousing, query optimization |
-| **Backend** | Node.js, Flask, FastAPI, Django, REST APIs, Docker |
-| **Tools** | Git, GitHub, Jupyter, VS Code, Linux / Unix programming |
-
-</details>
+|:---:|:---|
+| **Languages** | <img src="https://skillicons.dev/icons?i=python,js,bash&amp;perline=8" alt="Python, JavaScript, Bash" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="SQL" /> |
+| **Frontend** | <img src="https://skillicons.dev/icons?i=html,css&amp;perline=8" alt="HTML, CSS" /> <img src="https://img.shields.io/badge/GSAP-0AE448?style=flat-square&amp;logo=greensock&amp;logoColor=black" alt="GSAP" /> |
+| **Backend** | <img src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi&amp;perline=8" alt="Node.js, Django, Flask, FastAPI" /> <img src="https://img.shields.io/badge/REST%20APIs-0A66C2?style=flat-square" alt="REST APIs" /> |
+| **AI / ML** | <img src="https://skillicons.dev/icons?i=tensorflow,sklearn,opencv&amp;perline=8" alt="TensorFlow, scikit-learn, OpenCV" /> <img src="https://img.shields.io/badge/XGBoost-EB5424?style=flat-square" alt="XGBoost" /> <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&amp;logo=spacy&amp;logoColor=white" alt="spaCy" /> <img src="https://img.shields.io/badge/NLTK-154F5B?style=flat-square" alt="NLTK" /> <img src="https://img.shields.io/badge/SARIMAX-6A5ACD?style=flat-square" alt="SARIMAX" /> |
+| **Data** | <img src="https://skillicons.dev/icons?i=postgres,pandas,numpy,matplotlib&amp;perline=8" alt="PostgreSQL, Pandas, NumPy, Matplotlib" /> <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn" /> <img src="https://img.shields.io/badge/ETL-3A3F4B?style=flat-square" alt="ETL" /> <img src="https://img.shields.io/badge/Data%20Warehousing-336791?style=flat-square" alt="Data Warehousing" /> |
+| **Cloud & DevOps** | <img src="https://skillicons.dev/icons?i=docker,git,github&amp;perline=8" alt="Docker, Git, GitHub" /> <img src="https://img.shields.io/badge/Render-2F8F7A?style=flat-square&amp;logo=render&amp;logoColor=white" alt="Render" /> |
+| **Tools** | <img src="https://skillicons.dev/icons?i=vscode,linux&amp;perline=8" alt="VS Code, Linux" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter" /> |
 
 ---
 
