@@ -89,15 +89,23 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 <a id="skills"></a>
 ## 🛠️ Skills
 
-| Area | Tools |
-|:---:|:---|
-| **Languages** | <img src="https://skillicons.dev/icons?i=python,js,bash&amp;perline=8" alt="Python, JavaScript, Bash" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="SQL" /> |
-| **Frontend** | <img src="https://skillicons.dev/icons?i=html,css&amp;perline=8" alt="HTML, CSS" /> <img src="https://img.shields.io/badge/GSAP-0AE448?style=flat-square&amp;logo=greensock&amp;logoColor=black" alt="GSAP" /> |
-| **Backend** | <img src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi&amp;perline=8" alt="Node.js, Django, Flask, FastAPI" /> <img src="https://img.shields.io/badge/REST%20APIs-0A66C2?style=flat-square" alt="REST APIs" /> |
-| **AI / ML** | <img src="https://skillicons.dev/icons?i=tensorflow,sklearn,opencv&amp;perline=8" alt="TensorFlow, scikit-learn, OpenCV" /> <img src="https://img.shields.io/badge/XGBoost-EB5424?style=flat-square" alt="XGBoost" /> <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&amp;logo=spacy&amp;logoColor=white" alt="spaCy" /> <img src="https://img.shields.io/badge/NLTK-154F5B?style=flat-square" alt="NLTK" /> <img src="https://img.shields.io/badge/SARIMAX-6A5ACD?style=flat-square" alt="SARIMAX" /> |
-| **Data** | <img src="https://skillicons.dev/icons?i=postgres,pandas,numpy,matplotlib&amp;perline=8" alt="PostgreSQL, Pandas, NumPy, Matplotlib" /> <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn" /> <img src="https://img.shields.io/badge/ETL-3A3F4B?style=flat-square" alt="ETL" /> <img src="https://img.shields.io/badge/Data%20Warehousing-336791?style=flat-square" alt="Data Warehousing" /> |
-| **Cloud & DevOps** | <img src="https://skillicons.dev/icons?i=docker,git,github&amp;perline=8" alt="Docker, Git, GitHub" /> <img src="https://img.shields.io/badge/Render-2F8F7A?style=flat-square&amp;logo=render&amp;logoColor=white" alt="Render" /> |
-| **Tools** | <img src="https://skillicons.dev/icons?i=vscode,linux&amp;perline=8" alt="VS Code, Linux" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter" /> |
+<p align="center"><sub>How I work: from raw data to something people can use.</sub></p>
+
+```mermaid
+flowchart LR
+    A["Store<br/>and query"] --> B["Clean<br/>and explore"] --> C["Model"] --> D["Serve"] --> E["Ship"]
+    classDef stage fill:#0A66C2,stroke:#0A66C2,color:#ffffff;
+    class A,B,C,D,E stage;
+```
+
+| Stage | Tools |
+|:---|:---|
+| **Foundation** | <img src="https://skillicons.dev/icons?i=python,js,bash,vscode&amp;perline=8" alt="Python, JavaScript, Bash, VS Code" /> |
+| **1. Store and query** | <img src="https://skillicons.dev/icons?i=postgres&amp;perline=8" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="SQL" /> <img src="https://img.shields.io/badge/ETL-3A3F4B?style=flat-square" alt="ETL" /> <img src="https://img.shields.io/badge/Data%20Warehousing-336791?style=flat-square" alt="Data Warehousing" /><br/><sub>Seen in: <a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive-Warehouse</a></sub> |
+| **2. Clean and explore** | <img src="https://skillicons.dev/icons?i=pandas,numpy,matplotlib&amp;perline=8" alt="Pandas, NumPy, Matplotlib" /> <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter" /><br/><sub>Seen in: <a href="https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection">Credit-Card-Fraud-Detection</a>, <a href="https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis">Credit-Card-Comparison-Analysis</a></sub> |
+| **3. Model** | <img src="https://skillicons.dev/icons?i=tensorflow,sklearn,opencv&amp;perline=8" alt="TensorFlow, scikit-learn, OpenCV" /> <img src="https://img.shields.io/badge/XGBoost-EB5424?style=flat-square" alt="XGBoost" /> <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&amp;logo=spacy&amp;logoColor=white" alt="spaCy" /> <img src="https://img.shields.io/badge/NLTK-154F5B?style=flat-square" alt="NLTK" /> <img src="https://img.shields.io/badge/SARIMAX-6A5ACD?style=flat-square" alt="SARIMAX" /><br/><sub>Seen in: <a href="https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification">Transfer-Learning-Object-Classification</a>, <a href="https://github.com/bhavyapatel0201/ResumeExtractor">ResumeExtractor</a>, <a href="https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry">Stereo-Image-Matching</a></sub> |
+| **4. Serve** | <img src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi,html,css&amp;perline=8" alt="Node.js, Django, Flask, FastAPI, HTML, CSS" /> <img src="https://img.shields.io/badge/REST%20APIs-0A66C2?style=flat-square" alt="REST APIs" /> <img src="https://img.shields.io/badge/GSAP-0AE448?style=flat-square&amp;logo=greensock&amp;logoColor=black" alt="GSAP" /><br/><sub>Seen in: <a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive-Warehouse (web UI)</a>, <a href="https://github.com/Rajbeer-117/StudySync">StudySync (Django, group project)</a>, <a href="https://bhavyapatel0201.github.io">this portfolio</a></sub> |
+| **5. Ship** | <img src="https://skillicons.dev/icons?i=docker,git,github,linux&amp;perline=8" alt="Docker, Git, GitHub, Linux" /> <img src="https://img.shields.io/badge/Render-2F8F7A?style=flat-square&amp;logo=render&amp;logoColor=white" alt="Render" /><br/><sub>Seen in: <a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive-Warehouse (Docker and Render config)</a></sub> |
 
 ---
 
