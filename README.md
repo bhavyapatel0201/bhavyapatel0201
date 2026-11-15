@@ -49,54 +49,13 @@ I'm a Master of Applied Computing student at the University of Windsor. I build 
 
 </div>
 
-## Projects
+## 🚀 Featured Projects
 
-Click a project to expand it.
-
-<details>
-<summary><b>Plant disease detection</b> &nbsp;·&nbsp; CNN classifier, 96%+ accuracy</summary>
-<br/>
-
-Convolutional neural network that classifies plant leaf images by disease, reaching over 96% accuracy.
-
-**Stack:** Python, TensorFlow, OpenCV
-<!-- TODO: add the repo link, dataset name and one result image -->
-
-</details>
-
-<details>
-<summary><b>AI-powered resume extractor</b> &nbsp;·&nbsp; NLP document automation</summary>
-<br/>
-
-Pipeline that reads resumes and extracts structured fields such as skills, education and experience.
-
-**Stack:** Python, NLP
-<!-- TODO: add the repo link and the libraries you used -->
-
-</details>
-
-<details>
-<summary><b>Time-series forecasting</b> &nbsp;·&nbsp; SARIMAX</summary>
-<br/>
-
-Forecasting model built with the SARIMAX algorithm, which handles seasonality and external variables.
-
-**Stack:** Python, Pandas
-<!-- TODO: add the dataset, what you forecast and the error metric -->
-
-</details>
-
-<details>
-<summary><b>Backend services</b> &nbsp;·&nbsp; Node.js and REST APIs</summary>
-<br/>
-
-REST APIs built with Node.js.
-<!-- TODO: name the API project, its endpoints and database -->
-
-</details>
-
-<sub>More on my <a href="https://bhavyapatel0201.github.io/">portfolio</a> and in my <a href="https://github.com/bhavyapatel0201?tab=repositories">repositories</a>.</sub>
-
+- 🛡️ [**Credit Card Fraud Detection**](https://github.com/bhavyapatel0201/credit-card-fraud-detection) – classifies fraudulent transactions on highly imbalanced data. *Python, Jupyter*
+- 🏗️ [**Adaptive Sales Data Warehouse**](https://github.com/bhavyapatel0201/adaptive-warehouse) – tests whether workload-aware index and partition tuning beats a static design. *PostgreSQL, Python*
+- 📄 [**Resume Extractor**](https://github.com/bhavyapatel0201/ResumeExtractor) – NLP pipeline that extracts skills, education and experience from resumes. *Python, NLP*
+- 🖼️ [**Transfer Learning Object Classification**](https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification) – image classification with pretrained CNNs. *Python, deep learning*
+- 📷 [**Stereo Matching & Epipolar Geometry**](https://github.com/bhavyapatel0201/Stereo-Image-Matching-and-Epipolar-Geometry) – camera calibration and stereo reconstruction. *Python, OpenCV*
 ## GitHub activity
 
 <div align="center">
