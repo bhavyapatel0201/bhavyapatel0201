@@ -72,7 +72,7 @@ I'm a Master of Applied Computing student at the **University of Windsor**. I bu
 | 📄 [**Resume Extractor**](https://github.com/bhavyapatel0201/ResumeExtractor) | Resume upload web app that sends resumes to an n8n workflow for extraction, with a Python backend for Word-template output | Python, JavaScript, n8n |
 | 🖼️ [**Transfer Learning Object Classification**](https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification) | Classifies kitchenware images by fine-tuning pretrained VGG19 and DenseNet121, with a hyperparameter search and per-class metrics | Python, PyTorch |
 | 📷 [**Stereo Matching & Epipolar Geometry**](https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry) | Camera calibration, epipolar geometry and sparse 3D reconstruction from stereo images | Python, OpenCV |
-| 🔎 [**Credit Card Comparison**](https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis) | Java web app that crawls bank credit card pages, supports keyword search with spell check and search history, and recommends cards through a dashboard | Java, Maven |
+| 🔎 [**Credit Card Comparison**](https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis) | Group project: Spring Boot app with a Selenium crawler for bank credit card pages, keyword frequency counting, search history and a React dashboard | Java, Spring Boot, React, Selenium |
 
 <details>
 <summary><b>More things I've built</b> (click to expand)</summary>
