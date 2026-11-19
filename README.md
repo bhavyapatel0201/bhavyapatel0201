@@ -1,7 +1,7 @@
-<img width="100%" alt="Bhavya Patel" src="https://capsule-render.vercel.app/api?type=slice&color=0:000000,100:4F46E5&height=190&section=header&text=Bhavya%20Patel&fontSize=52&fontColor=FFFFFF&fontAlignY=46&desc=AI%2FML%20%C2%B7%20Data%20Engineering&descSize=18&descAlignY=68" />
+<img width="100%" alt="Bhavya Patel" src="https://capsule-render.vercel.app/api?type=slice&color=0:000000,100:4F46E5&height=190&section=header&text=Bhavya%20Patel&fontSize=52&fontColor=FFFFFF&fontAlignY=50" />
 
 <p align="center">
-  <img alt="Master's student at UWindsor. AI/ML projects. Data engineering. Systems and automation. Open to a co-op from January 2027." src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=818CF8&center=true&vCenter=true&width=640&lines=Master%27s+student+%40+University+of+Windsor;AI+%2F+ML+projects;Data+engineering;Systems+%26+automation;Open+to+a+co-op+from+January+2027" />
+  <img alt="AI/ML projects, data engineering, systems and automation." src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=818CF8&center=true&vCenter=true&width=640&lines=AI+%2F+ML+projects;Data+engineering;Systems+%26+automation" />
 </p>
 
 <p align="center">
@@ -17,7 +17,6 @@
 <table>
   <tr><td><b>Studying</b></td><td>Master of Applied Computing, University of Windsor</td></tr>
   <tr><td><b>Background</b></td><td>B.Tech in Computer Science and Engineering, Charotar University of Science and Technology</td></tr>
-  <tr><td><b>Interests</b></td><td>Machine learning, data engineering, systems programming</td></tr>
   <tr><td><b>Based in</b></td><td>Windsor, ON, Canada</td></tr>
   <tr><td><b>Languages</b></td><td>English, Hindi, Gujarati, Sanskrit</td></tr>
   <tr><td><b>Looking for</b></td><td>A 4–8 month co-op starting January 2027</td></tr>
@@ -108,6 +107,6 @@ I like projects where data, models and software have to work together: a classif
 
 ## Get in touch
 
-Working on something in AI/ML or data engineering? Write to me at [bhavyapatel0201@gmail.com](mailto:bhavyapatel0201@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/bhavya-patel-data).
+Working on something in AI/ML or data engineering? Reach out through any of the links at the top.
 
 <img width="100%" alt="" src="https://capsule-render.vercel.app/api?type=slice&color=0:4F46E5,100:000000&height=110&section=footer" />

@@ -198,11 +198,10 @@ def tile(i, t, letter=None):
 
 # ---- 3. monthly chart + stats -------------------------------------------------------------
 def activity():
-    c = Card("activity", W, 372, f"Contributions per month over the last 12 months, {total} in total. Current streak {cur} days, "
-             f"{active} active days, busiest day {busiest[0]:%b %d, %Y} with {busiest[1]} contributions.", delay=1.6)
+    c = Card("activity", W, 300, "Bar chart of contributions per month over the last 12 months.", delay=1.6)
     c.frame()
     c.text(40, 52, "Contributions per month", "i600", 18, TEXT)
-    c.text(40, 74, f"{total} in the last 12 months{SAMPLE_NOTE}", "m500", 12, MUTED, delay=0.05)
+    c.text(40, 74, f"Last 12 months{SAMPLE_NOTE}", "m500", 12, MUTED, delay=0.05)
     x0, slot, base, top = 40, 60, 262, 122
     mx = max(1, max(v for *_, v in months)); bw = 34
     for k in range(4):
@@ -214,14 +213,6 @@ def activity():
         c.add(f'<rect x="{x:.0f}" y="{base - h:.1f}" width="{bw}" height="{h:.1f}" rx="3" fill="{INDIGO}" opacity="{1 if i == peak else .5}"{c.a("gr", dl)}/>')
         c.text(x + bw / 2, base - h - 8, str(v), "m700" if i == peak else "m500", 11, TEXT if i == peak else TEXT2, anchor="middle", delay=dl + .35)
         c.text(x + bw / 2, base + 20, MON[mm - 1], "m500", 11, MUTED, anchor="middle", delay=dl)
-    stats = [(f"{cur} day{'s' if cur != 1 else ''}", f"Current streak, longest {longest}"),
-             (f"{active} days", f"Active, {active * 100 // len(days)}% of the year"),
-             (f"{busiest[1]} contributions", f"Busiest day, {MON[busiest[0].month - 1]} {busiest[0].day}, {busiest[0].year}")]
-    for i, (big, small) in enumerate(stats):
-        x = 40 + i * 240 + (i and 12)
-        if i: c.add(f'<line x1="{x - 16}" x2="{x - 16}" y1="302" y2="346" stroke="{BORDER}"/>')
-        c.text(x, 326, big, "i600", 24, TEXT, delay=1.0 + i * .12)
-        c.text(x, 346, small, "i400", 12, TEXT2, delay=1.05 + i * .12)
     return c.render()
 
 # ---- 3b. stats + languages, streak --------------------------------------------------------
@@ -235,7 +226,7 @@ def stats():
              f"{st['issues']} issues. Most used languages: " + ", ".join(l["name"] for l in langs[:6]) + ".", delay=1.2)
     c.frame()
     c.text(40, 52, "GitHub stats", "i600", 18, TEXT)
-    rows = [("Stars earned", st["stars"]), ("Commits, last 12 months", st["commits"]), ("Pull requests", st["prs"]),
+    rows = [("Stars earned", st["stars"]), ("Commits, past year", st["commits"]), ("Pull requests", st["prs"]),
             ("Issues opened", st["issues"]), ("Repositories contributed to", st["contributed_to"])]
     for i, (lab, val) in enumerate(rows):
         y = 94 + i * 30
@@ -261,33 +252,30 @@ def stats():
 
 def streak():
     last = today if by_date.get(today) else today - dt.timedelta(days=1)
-    cs = last - dt.timedelta(days=cur - 1) if cur else None
-    best, run, bs, be, st0 = 0, 0, None, None, None
-    for dd, v in days:
-        if v:
-            if not run: st0 = dd
-            run += 1
-            if run > best: best, bs, be = run, st0, dd
-        else: run = 0
-    c = Card("streak", W, 190, f"{total} contributions in the last 12 months. Current streak {cur} days. Longest streak {best} days.", delay=1.5)
+    best = run = 0
+    for _, v in days:
+        run = run + 1 if v else 0; best = max(best, run)
+    c = Card("streak", W, 170, f"Current streak {cur} days, longest {best}. {total} contributions in the last 12 months, "
+             f"{active} active days, busiest day {busiest[0]:%b %d, %Y} with {busiest[1]} contributions.", delay=1.5)
     c.frame()
-    mid = W / 2
-    for x in (W / 3 + 5, 2 * W / 3 - 5): c.add(f'<line x1="{x:.0f}" x2="{x:.0f}" y1="36" y2="154" stroke="{BORDER}"/>')
-    cx = W / 6
-    c.text(cx, 90, f"{total:,}", "i800", 34, TEXT, anchor="middle", delay=.1)
-    c.text(cx, 118, "Contributions, last 12 months", "i400", 13, TEXT2, anchor="middle", delay=.15)
-    c.text(cx, 140, _range(days[0][0], today), "m500", 11, MUTED, anchor="middle", delay=.2)
+    q = W / 4
+    for k in (1, 2, 3): c.add(f'<line x1="{q * k:.0f}" x2="{q * k:.0f}" y1="34" y2="136" stroke="{BORDER}"/>')
+    cx = q / 2
     frac = min(1, cur / best) * 100 if best else 0
-    c.add(f'<circle cx="{mid}" cy="78" r="38" fill="none" stroke="{BORDER}" stroke-width="6"/>')
-    c.add(f'<circle cx="{mid}" cy="78" r="38" fill="none" stroke="{INDIGO}" stroke-width="6" stroke-linecap="round" pathLength="100" '
-          f'stroke-dasharray="{frac:.1f} 100" transform="rotate(-90 {mid} 78)"{c.a("rg", .2)}/>')
-    c.text(mid, 87, str(cur), "i800", 28, TEXT, anchor="middle", delay=.3)
-    c.text(mid, 144, "Current streak", "i600", 13, TEXT, anchor="middle", delay=.35)
-    c.text(mid, 162, _range(cs, last) if cs else "No active streak", "m500", 11, MUTED, anchor="middle", delay=.4)
-    cx = 5 * W / 6
-    c.text(cx, 90, str(best), "i800", 34, TEXT, anchor="middle", delay=.45)
-    c.text(cx, 118, "Longest streak, days", "i400", 13, TEXT2, anchor="middle", delay=.5)
-    c.text(cx, 140, _range(bs, be) if bs else "", "m500", 11, MUTED, anchor="middle", delay=.55)
+    c.add(f'<circle cx="{cx}" cy="64" r="32" fill="none" stroke="{BORDER}" stroke-width="5"/>')
+    c.add(f'<circle cx="{cx}" cy="64" r="32" fill="none" stroke="{INDIGO}" stroke-width="5" stroke-linecap="round" pathLength="100" '
+          f'stroke-dasharray="{frac:.1f} 100" transform="rotate(-90 {cx} 64)"{c.a("rg", .2)}/>')
+    c.text(cx, 73, str(cur), "i800", 24, TEXT, anchor="middle", delay=.3)
+    c.text(cx, 118, "Current streak", "i600", 13, TEXT, anchor="middle", delay=.35)
+    c.text(cx, 136, f"Longest: {best} days", "m500", 11, MUTED, anchor="middle", delay=.4)
+    blocks = [(f"{total:,}", "Contributions", "in total"),
+              (str(active), "Active days", f"{active * 100 // len(days)}% of the year"),
+              (str(busiest[1]), "Busiest day", f"{MON[busiest[0].month - 1]} {busiest[0].day}, {busiest[0].year}")]
+    for i, (big, lab, sub) in enumerate(blocks):
+        x = q * (i + 1) + q / 2; d0 = .45 + i * .12
+        c.text(x, 76, big, "i800", 32, TEXT, anchor="middle", delay=d0)
+        c.text(x, 104, lab, "i600", 13, TEXT, anchor="middle", delay=d0 + .05)
+        c.text(x, 122, sub, "m500", 11, MUTED, anchor="middle", delay=d0 + .1)
     return c.render()
 
 # ---- 4. repo cards ------------------------------------------------------------------------
@@ -323,10 +311,10 @@ def repo(i, r, nlines, has_meta):
 
 # ---- 5. contribution graph ----------------------------------------------------------------
 def graph():
-    c = Card("graph", W, 244, f"Contribution graph for the last year, {total} contributions.", delay=3.4)
+    c = Card("graph", W, 244, "Contribution graph for the last year.", delay=3.4)
     c.frame()
     c.text(30, 44, "Contribution graph", "i600", 18, TEXT)
-    c.text(W - 30, 44, f"{total} contributions{SAMPLE_NOTE}", "m500", 12, MUTED, anchor="end", delay=.05)
+    c.text(W - 30, 44, SAMPLE_NOTE.strip(" ·"), "m500", 12, MUTED, anchor="end", delay=.05)
     nz = sorted(v for _, v in days if v)
     q = [nz[int(len(nz) * f) - 1] if nz else 1 for f in (.25, .5, .75)]
     lv = lambda v: 0 if v == 0 else 1 if v <= q[0] else 2 if v <= q[1] else 3 if v <= q[2] else 4
