@@ -34,6 +34,18 @@ query($login:String!, $from:DateTime!, $to:DateTime!) {
     }
   }
 }"""
+SQ = """
+query($login:String!, $from:DateTime!, $to:DateTime!) {
+  user(login:$login) {
+    contributionsCollection(from:$from, to:$to) { totalCommitContributions }
+    pullRequests { totalCount }
+    issues { totalCount }
+    repositoriesContributedTo(first:1, contributionTypes:[COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount }
+    repositories(ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, first:100) {
+      nodes { stargazerCount languages(first:10, orderBy:{field:SIZE, direction:DESC}) { edges { size node { name color } } } }
+    }
+  }
+}"""
 RQ = """
 query($login:String!, $name:String!) {
   repository(owner:$login, name:$name) {
@@ -62,8 +74,21 @@ for r in CFG["repos"]:
             "language_color": (n["primaryLanguage"] or {}).get("color"),
         }
 
+u = gql(SQ, {"login": CFG["user"], "from": start.isoformat(), "to": today.isoformat()})["user"]
+stars, langs = 0, {}
+for n in u["repositories"]["nodes"]:
+    stars += n["stargazerCount"]
+    for e in n["languages"]["edges"]:
+        l = langs.setdefault(e["node"]["name"], {"name": e["node"]["name"], "color": e["node"]["color"], "bytes": 0})
+        l["bytes"] += e["size"]
+top = sorted(langs.values(), key=lambda x: -x["bytes"])
+stats = {"stars": stars, "commits": u["contributionsCollection"]["totalCommitContributions"],
+         "prs": u["pullRequests"]["totalCount"], "issues": u["issues"]["totalCount"],
+         "contributed_to": u["repositoriesContributedTo"]["totalCount"]}
+
 out = {"sample": False, "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-       "user": CFG["user"], "total": cal["totalContributions"], "days": days, "repos": repos}
+       "user": CFG["user"], "total": cal["totalContributions"], "days": days, "repos": repos,
+       "stats": stats, "languages": top[:12]}
 (ROOT / "data").mkdir(exist_ok=True)
 (ROOT / "data/contributions.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
 print(f"wrote {len(days)} days, {cal['totalContributions']} contributions, {len(repos)} repos")

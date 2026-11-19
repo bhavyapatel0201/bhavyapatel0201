@@ -72,12 +72,14 @@ KEYFRAMES = """
 @keyframes gr{from{transform:scaleY(0)}}
 @keyframes sx{from{transform:scaleX(0)}}
 @keyframes pp{from{opacity:0;transform:scale(.4)}}
+@keyframes rg{from{stroke-dasharray:0 100}}
 @keyframes dr{50%{transform:translate(26px,-12px)}}
 .fu{animation:fu .7s cubic-bezier(.2,.7,.2,1) both}
 .fi{animation:fi .6s ease-out both}
 .gr{transform-box:fill-box;transform-origin:50% 100%;animation:gr .8s cubic-bezier(.2,.7,.2,1) both}
 .sx{transform-box:fill-box;transform-origin:0 50%;animation:sx .7s cubic-bezier(.2,.7,.2,1) both}
 .pp{transform-box:fill-box;transform-origin:center;animation:pp .35s ease-out both}
+.rg{animation:rg 1.1s cubic-bezier(.2,.7,.2,1) both}
 .dr{animation:dr 16s ease-in-out infinite}
 .still{display:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.motion{display:none}.still{display:inline}}
@@ -222,6 +224,72 @@ def activity():
         c.text(x, 346, small, "i400", 12, TEXT2, delay=1.05 + i * .12)
     return c.render()
 
+# ---- 3b. stats + languages, streak --------------------------------------------------------
+def _range(a, b):
+    f = lambda d: f"{MON[d.month - 1]} {d.day}"
+    return f"{f(a)} to {f(b)}" if a != b else f(a)
+
+def stats():
+    st, langs = DATA["stats"], DATA.get("languages", [])
+    c = Card("stats", W, 250, f"GitHub stats: {st['stars']} stars, {st['commits']} commits in the last 12 months, {st['prs']} pull requests, "
+             f"{st['issues']} issues. Most used languages: " + ", ".join(l["name"] for l in langs[:6]) + ".", delay=1.2)
+    c.frame()
+    c.text(40, 52, "GitHub stats", "i600", 18, TEXT)
+    rows = [("Stars earned", st["stars"]), ("Commits, last 12 months", st["commits"]), ("Pull requests", st["prs"]),
+            ("Issues opened", st["issues"]), ("Repositories contributed to", st["contributed_to"])]
+    for i, (lab, val) in enumerate(rows):
+        y = 94 + i * 30
+        c.text(40, y, lab, "i400", 14, TEXT2, delay=0.1 + i * .07)
+        c.text(380, y, f"{val:,}", "m700", 14, TEXT, anchor="end", delay=0.15 + i * .07)
+        if i < len(rows) - 1: c.add(f'<line x1="40" x2="380" y1="{y + 12}" y2="{y + 12}" stroke="{BORDER}"/>')
+    c.add(f'<line x1="420" x2="420" y1="40" y2="212" stroke="{BORDER}"/>')
+    c.text(460, 52, "Most used languages", "i600", 18, TEXT, delay=.1)
+    top = langs[:6]; tot = sum(l["bytes"] for l in top) or 1
+    x, bw = 460, 300
+    c.add(f'<clipPath id="lb"><rect x="{x}" y="72" width="{bw}" height="8" rx="4"/></clipPath><g clip-path="url(#lb)"{c.a("sx", .3)}>')
+    for l in top:
+        w = bw * l["bytes"] / tot
+        c.add(f'<rect x="{x:.1f}" y="72" width="{w + .5:.1f}" height="8" fill="{l.get("color") or INDIGO_HI}"/>'); x += w
+    c.add('</g>')
+    for i, l in enumerate(top):
+        cx, cy = 460 + (i % 2) * 150, 112 + (i // 2) * 34
+        c.add(f'<circle cx="{cx + 4}" cy="{cy - 4}" r="4" fill="{l.get("color") or INDIGO_HI}"{c.a("fu", .4 + i * .06)}/>')
+        c.text(cx + 14, cy, l["name"], "i400", 13, TEXT2, delay=.4 + i * .06)
+        c.text(cx + 14, cy + 16, f"{l['bytes'] * 100 / tot:.1f}%", "m500", 11, MUTED, delay=.45 + i * .06)
+    if DATA.get("sample"): c.text(W - 24, 236, "sample data", "m500", 10, MUTED, anchor="end", cls="fi", delay=.5)
+    return c.render()
+
+def streak():
+    last = today if by_date.get(today) else today - dt.timedelta(days=1)
+    cs = last - dt.timedelta(days=cur - 1) if cur else None
+    best, run, bs, be, st0 = 0, 0, None, None, None
+    for dd, v in days:
+        if v:
+            if not run: st0 = dd
+            run += 1
+            if run > best: best, bs, be = run, st0, dd
+        else: run = 0
+    c = Card("streak", W, 190, f"{total} contributions in the last 12 months. Current streak {cur} days. Longest streak {best} days.", delay=1.5)
+    c.frame()
+    mid = W / 2
+    for x in (W / 3 + 5, 2 * W / 3 - 5): c.add(f'<line x1="{x:.0f}" x2="{x:.0f}" y1="36" y2="154" stroke="{BORDER}"/>')
+    cx = W / 6
+    c.text(cx, 90, f"{total:,}", "i800", 34, TEXT, anchor="middle", delay=.1)
+    c.text(cx, 118, "Contributions, last 12 months", "i400", 13, TEXT2, anchor="middle", delay=.15)
+    c.text(cx, 140, _range(days[0][0], today), "m500", 11, MUTED, anchor="middle", delay=.2)
+    frac = min(1, cur / best) * 100 if best else 0
+    c.add(f'<circle cx="{mid}" cy="78" r="38" fill="none" stroke="{BORDER}" stroke-width="6"/>')
+    c.add(f'<circle cx="{mid}" cy="78" r="38" fill="none" stroke="{INDIGO}" stroke-width="6" stroke-linecap="round" pathLength="100" '
+          f'stroke-dasharray="{frac:.1f} 100" transform="rotate(-90 {mid} 78)"{c.a("rg", .2)}/>')
+    c.text(mid, 87, str(cur), "i800", 28, TEXT, anchor="middle", delay=.3)
+    c.text(mid, 144, "Current streak", "i600", 13, TEXT, anchor="middle", delay=.35)
+    c.text(mid, 162, _range(cs, last) if cs else "No active streak", "m500", 11, MUTED, anchor="middle", delay=.4)
+    cx = 5 * W / 6
+    c.text(cx, 90, str(best), "i800", 34, TEXT, anchor="middle", delay=.45)
+    c.text(cx, 118, "Longest streak, days", "i400", 13, TEXT2, anchor="middle", delay=.5)
+    c.text(cx, 140, _range(bs, be) if bs else "", "m500", 11, MUTED, anchor="middle", delay=.55)
+    return c.render()
+
 # ---- 4. repo cards ------------------------------------------------------------------------
 RW = 392  # repo cards sit two per row in the README
 
@@ -287,6 +355,7 @@ def main():
     print(f"{'STATIC preview' if STATIC else 'Animated build'} -> {OUT.relative_to(ROOT)}/")
     names = [hero()]
     for i, t in enumerate(CFG["tiles"]): names.append(tile(i, t))
+    if "stats" in DATA: names += [stats(), streak()]
     names.append(activity())
     nl = max(len(wrap(_blurb(r), "i400", 13, RW - 48, 4)) for r in CFG["repos"])
     hm = any(DATA.get("repos", {}).get(r["name"]) for r in CFG["repos"])

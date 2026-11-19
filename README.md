@@ -79,17 +79,24 @@ I like projects where data, models and software have to work together: a classif
 ## Toolbox
 
 <table align="center">
-  <tr><td align="center" width="140"><b>Core</b></td><td><img alt="Python, Java, JavaScript, Bash" src="https://skillicons.dev/icons?i=py,java,js,bash&theme=dark" /></td></tr>
-  <tr><td align="center"><b>Data</b></td><td><img alt="PostgreSQL, pandas, NumPy" src="https://skillicons.dev/icons?i=postgres,pandas,numpy&theme=dark" /></td></tr>
-  <tr><td align="center"><b>ML and vision</b></td><td><img alt="PyTorch, TensorFlow, scikit-learn, OpenCV" src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" /></td></tr>
-  <tr><td align="center"><b>Web</b></td><td><img alt="Node.js, Django, Flask, FastAPI, Spring, React" src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi,spring,react&theme=dark" /></td></tr>
-  <tr><td align="center"><b>Workflow</b></td><td><img alt="Docker, Git, GitHub, Linux" src="https://skillicons.dev/icons?i=docker,git,github,linux&theme=dark" /></td></tr>
+  <tr><td align="center" width="150"><b>Languages</b></td><td><img alt="Python, Java, JavaScript, HTML, CSS, Bash" src="https://skillicons.dev/icons?i=py,java,js,html,css,bash&theme=dark" /> <img alt="SQL" src="https://img.shields.io/badge/SQL-333333?style=flat-square&logo=postgresql&logoColor=white" /></td></tr>
+  <tr><td align="center" width="150"><b>Data and analysis</b></td><td><img alt="PostgreSQL, pandas, NumPy, Matplotlib" src="https://skillicons.dev/icons?i=postgres,pandas,numpy,matplotlib&theme=dark" /> <img alt="Seaborn" src="https://img.shields.io/badge/Seaborn-333333?style=flat-square" /> <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-333333?style=flat-square&logo=jupyter&logoColor=white" /></td></tr>
+  <tr><td align="center" width="150"><b>ML and vision</b></td><td><img alt="PyTorch, TensorFlow, scikit-learn, OpenCV" src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" /> <img alt="XGBoost" src="https://img.shields.io/badge/XGBoost-333333?style=flat-square" /></td></tr>
+  <tr><td align="center" width="150"><b>Web and backend</b></td><td><img alt="Node.js, Django, Flask, FastAPI, Spring, React" src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi,spring,react&theme=dark" /> <img alt="REST_APIs" src="https://img.shields.io/badge/REST_APIs-333333?style=flat-square" /></td></tr>
+  <tr><td align="center" width="150"><b>Automation</b></td><td><img alt="n8n" src="https://img.shields.io/badge/n8n-333333?style=flat-square&logo=n8n&logoColor=white" /> <img alt="Selenium" src="https://img.shields.io/badge/Selenium-333333?style=flat-square&logo=selenium&logoColor=white" /></td></tr>
+  <tr><td align="center" width="150"><b>Workflow and deploy</b></td><td><img alt="Docker, Git, GitHub, Linux, VS Code" src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode&theme=dark" /> <img alt="Render" src="https://img.shields.io/badge/Render-333333?style=flat-square&logo=render&logoColor=white" /></td></tr>
 </table>
 
 ---
 
 ## Activity
 
+<p align="center">
+  <img width="100%" src="cards/stats.svg" alt="GitHub stats: stars, commits in the last 12 months, pull requests, issues, repositories contributed to, and my most used languages." />
+</p>
+<p align="center">
+  <img width="100%" src="cards/streak.svg" alt="Total contributions in the last 12 months, current streak and longest streak." />
+</p>
 <p align="center">
   <img width="100%" src="cards/activity.svg" alt="Bar chart of my GitHub contributions per month over the last year, with current streak, active days and busiest day." />
 </p>
