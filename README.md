@@ -1,93 +1,124 @@
-<h1 align="center">Bhavya Patel</h1>
-
 <p align="center">
-  AI/ML and Data Engineering<br />
-  Master of Applied Computing, University of Windsor
+  <a href="https://github.com/bhavyapatel0201"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:000000,100:555555&height=220&section=header&text=Bhavya%20Patel&fontSize=80&fontColor=FFFFFF&animation=fadeIn&fontAlignY=42&desc=AI%2FML%20%C2%B7%20Data%20Engineering&descSize=24&descAlignY=64" width="100%" alt="Bhavya Patel, AI/ML and Data Engineering" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=VT323&size=34&duration=2000&pause=1600&color=FFFFFF&background=000000&center=true&vCenter=true&width=854&height=64&lines=%3E+master%27s+student+at+the+university+of+windsor.;%3E+building+ai%2Fml+and+data+engineering+projects.;%3E+open+to+a+co-op+from+january+2027." width="100%" alt="Master's student at the University of Windsor. Building AI/ML and data engineering projects. Open to a co-op from January 2027." />
 </p>
 
 <p align="center">
-  <a href="https://bhavyapatel0201.github.io">Portfolio</a> &nbsp;|&nbsp;
-  <a href="https://www.linkedin.com/in/bhavya-patel-data">LinkedIn</a> &nbsp;|&nbsp;
-  <a href="mailto:bhavyapatel0201@gmail.com">Email</a> &nbsp;|&nbsp;
-  <a href="https://bhavyapatel0201.github.io/assets/Bhavya_Patel_Master_Resume.pdf">Résumé</a>
+  <a href="https://www.linkedin.com/in/bhavya-patel-data"><img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge" alt="LinkedIn" /></a>
+  <a href="https://bhavyapatel0201.github.io"><img src="https://img.shields.io/badge/Portfolio-333333?style=for-the-badge" alt="Portfolio" /></a>
+  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/Email-333333?style=for-the-badge" alt="Email" /></a>
 </p>
 
-<p align="center"><sub>Seeking a 4–8 month co-op starting January 2027 · Windsor, ON, Canada</sub></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/96%25%2B-CNN_plant_disease_accuracy-D4D4D4?style=for-the-badge&labelColor=000000" alt="96%+ accuracy on a CNN plant disease detector" />
+  <img src="https://img.shields.io/badge/6-featured_projects-D4D4D4?style=for-the-badge&labelColor=000000" alt="6 featured projects" />
+  <img src="https://img.shields.io/badge/Jan_2027-co--op_start-D4D4D4?style=for-the-badge&labelColor=000000" alt="Available for a co-op from January 2027" />
+</p>
 
----
+## 🧬 about
 
-### About
+```python
+me = {
+    "does":     "builds AI/ML and data engineering projects",
+    "based":    "Windsor, ON, Canada",
+    "now":      "part-time data entry clerk @ Central Transport",
+    "degree":   "Master of Applied Computing, University of Windsor",
+    "learning": "data engineering, systems programming",
+    "speaks":   ["English", "Hindi", "Gujarati", "Sanskrit"],
+}
+```
 
-I build machine learning and data engineering projects, with a focus on the point where models, data pipelines and systems programming meet. I am a Master of Applied Computing student at the University of Windsor, and I hold a B.Tech in Computer Science and Engineering from Charotar University of Science and Technology (GPA 3.45/4.0). I speak English, Hindi, Gujarati and Sanskrit.
+<details>
+<summary><b>🌱 how I got here. click for the short version</b></summary>
+<br />
+<table>
+  <tr><td><b>Earlier</b></td><td>B.Tech in Computer Science and Engineering, Charotar University of Science and Technology (GPA 3.45/4.0)</td></tr>
+  <tr><td><b>Jan 2026</b></td><td>Started the Master of Applied Computing at the University of Windsor</td></tr>
+  <tr><td><b>Jan 2027</b></td><td>Looking for a 4–8 month co-op in AI/ML and data engineering</td></tr>
+</table>
+</details>
 
-### Experience
+## 💼 experience
 
 <table>
   <tr>
-    <td width="30%" valign="top"><b>Data Entry Clerk</b><br /><sub>Central Transport, Windsor, ON<br />Part-time</sub></td>
+    <td width="36%" valign="top"><b>Data Entry Clerk</b><br /><sub>Central Transport, Windsor, ON · part-time</sub></td>
     <td valign="top">Part-time role alongside my Master's program.</td>
   </tr>
 </table>
 
-### Selected projects
+## 🚀 projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection">Credit Card Fraud Detection</a></b><br />
-      <sub>Machine learning</sub>
+      <h3>🛡️ <a href="https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection">Credit Card Fraud Detection</a></h3>
+      <sub><b>machine learning</b></sub>
       <p>Classifies fraudulent transactions on highly imbalanced data.</p>
-      <sub>Python · scikit-learn · Jupyter</sub>
+      <p><code>Python</code> <code>scikit-learn</code> <code>Jupyter</code></p>
     </td>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive Sales Data Warehouse</a></b><br />
-      <sub>Data engineering</sub>
+      <h3>🏗️ <a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive Sales Data Warehouse</a></h3>
+      <sub><b>data engineering</b></sub>
       <p>Tests whether workload-aware index and partition tuning beats a static design as query patterns shift.</p>
-      <sub>PostgreSQL · Python</sub>
+      <p><code>PostgreSQL</code> <code>Python</code></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/ResumeExtractor">Resume Extractor</a></b><br />
-      <sub>Automation</sub>
+      <h3>📄 <a href="https://github.com/bhavyapatel0201/ResumeExtractor">Resume Extractor</a></h3>
+      <sub><b>automation</b></sub>
       <p>Resume upload web app that sends resumes to an n8n workflow for extraction, with a Python backend for Word-template output.</p>
-      <sub>Python · JavaScript · n8n</sub>
+      <p><code>Python</code> <code>JavaScript</code> <code>n8n</code></p>
     </td>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification">Transfer Learning Object Classification</a></b><br />
-      <sub>Deep learning</sub>
+      <h3>🖼️ <a href="https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification">Transfer Learning Object Classification</a></h3>
+      <sub><b>deep learning</b></sub>
       <p>Classifies kitchenware images by fine-tuning pretrained VGG19 and DenseNet121, with a hyperparameter search and per-class metrics.</p>
-      <sub>Python · PyTorch</sub>
+      <p><code>Python</code> <code>PyTorch</code></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry">Stereo Matching &amp; Epipolar Geometry</a></b><br />
-      <sub>Computer vision</sub>
+      <h3>📷 <a href="https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry">Stereo Matching &amp; Epipolar Geometry</a></h3>
+      <sub><b>computer vision</b></sub>
       <p>Camera calibration, epipolar geometry and sparse 3D reconstruction from stereo images.</p>
-      <sub>Python · OpenCV</sub>
+      <p><code>Python</code> <code>OpenCV</code></p>
     </td>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis">Credit Card Comparison</a></b><br />
-      <sub>Group project</sub>
+      <h3>🔎 <a href="https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis">Credit Card Comparison</a></h3>
+      <sub><b>group project</b></sub>
       <p>Spring Boot app with a Selenium crawler for bank credit card pages, keyword frequency counting and a React dashboard.</p>
-      <sub>Java · Spring Boot · React · Selenium</sub>
+      <p><code>Java</code> <code>Spring Boot</code> <code>React</code> <code>Selenium</code></p>
     </td>
   </tr>
 </table>
 
-More work is on my [repositories page](https://github.com/bhavyapatel0201?tab=repositories).
+<p align="center"><a href="https://github.com/bhavyapatel0201?tab=repositories"><img src="https://img.shields.io/badge/more_on_github-333333?style=for-the-badge" alt="More repositories on GitHub" /></a></p>
 
-### Technical skills
+## 🧰 stack
 
-| | |
-|---|---|
-| **Languages** | Python, Java, JavaScript, SQL, Bash |
-| **Data** | PostgreSQL, pandas, NumPy, Matplotlib |
-| **Machine learning and vision** | PyTorch, TensorFlow, scikit-learn, OpenCV |
-| **Web and backend** | Node.js, Django, Flask, FastAPI, Spring Boot, React |
-| **Tools** | Git, GitHub, Docker, Linux, n8n |
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-333333?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Java-333333?style=flat-square" alt="Java" />
+  <img src="https://img.shields.io/badge/JavaScript-333333?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/PostgreSQL-333333?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Pandas-333333?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/NumPy-333333?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/PyTorch-333333?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/TensorFlow-333333?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/scikit--learn-333333?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
+  <img src="https://img.shields.io/badge/OpenCV-333333?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/Docker-333333?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Git-333333?style=flat-square&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-333333?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Linux-333333?style=flat-square&logo=linux&logoColor=white" alt="Linux" />
+</p>
 
-### Contact
+<p align="center"><b>Working on something in AI/ML or data engineering? I'd love to hear about it.</b></p>
 
-Working on something in AI/ML or data engineering? I'd like to hear about it: [bhavyapatel0201@gmail.com](mailto:bhavyapatel0201@gmail.com).
+<p align="center">
+  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/say_hi-333333?style=for-the-badge" alt="Email me" /></a>
+</p>
+
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:555555,100:000000&height=90&section=footer&text=open%20to%20a%20co-op%20from%20january%202027&fontSize=30&fontColor=FFFFFF&fontAlignY=52" width="100%" alt="Open to a co-op from January 2027" /></p>
