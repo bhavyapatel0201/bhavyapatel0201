@@ -23,8 +23,8 @@ STATIC = os.environ.get("STATIC", "").lower() not in ("", "0", "false", "no")
 OUT = ROOT / ("preview" if STATIC else "cards")
 
 # ---- brand tokens (from the portfolio's dark theme) -------------------------------------
-BG, SURFACE, ELEV = "#0a0f1d", "#0f172a", "#1a243c"
-BORDER, TEXT, TEXT2, MUTED = "#1e293b", "#f8fafc", "#94a3b8", "#64748b"
+BG, SURFACE, ELEV = "#000000", "#000000", "#171717"
+BORDER, TEXT, TEXT2, MUTED = "#262626", "#fafafa", "#a1a1aa", "#71717a"
 INDIGO, INDIGO_HI, CYAN, EMERALD = "#6366f1", "#818cf8", "#22d3ee", "#34d399"
 W = 800
 
@@ -103,7 +103,7 @@ class Card:
     def smil(s, motion, still):
         s.add(still if STATIC else f'<g class="motion">{motion}</g><g class="still">{still}</g>')
 
-    def frame(s, rx=16):
+    def frame(s, rx=10):
         s.defs.append(f'<clipPath id="cp"><rect width="{s.w}" height="{s.h}" rx="{rx}"/></clipPath>')
         s.body.insert(0, f'<rect width="{s.w}" height="{s.h}" rx="{rx}" fill="{SURFACE}"/>')
         s.add(f'<rect x=".5" y=".5" width="{s.w - 1}" height="{s.h - 1}" rx="{rx}" fill="none" stroke="{BORDER}"/>')
@@ -162,60 +162,54 @@ MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "No
 
 # ---- 1. hero ------------------------------------------------------------------------------
 def hero():
-    c = Card("hero", W, 300, f"{CFG['name']}. {CFG['hero_line']} {CFG['status']}.")
-    c.frame(); c.defs += [GRAD, f'<radialGradient id="gl1"><stop offset="0" stop-color="{INDIGO}" stop-opacity=".38"/><stop offset="1" stop-color="{INDIGO}" stop-opacity="0"/></radialGradient>',
-                          f'<radialGradient id="gl2"><stop offset="0" stop-color="{CYAN}" stop-opacity=".18"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>']
-    c.add(f'<g clip-path="url(#cp)"><g{"" if STATIC else " class=\"dr\""}><ellipse cx="660" cy="40" rx="320" ry="190" fill="url(#gl1)"/>'
-          f'<ellipse cx="90" cy="300" rx="260" ry="120" fill="url(#gl2)"/></g></g>')
-    pill = CFG["status"]; pw = tw(pill, "m500", 12) + 44
-    c.add(f'<g{c.a("fu", 0.1)}><rect x="48" y="36" width="{pw:.0f}" height="30" rx="15" fill="{mix(EMERALD, SURFACE, .12)}" stroke="{mix(EMERALD, SURFACE, .35)}"/></g>')
-    dot = lambda r: f'<circle cx="66" cy="51" r="{r}" fill="{EMERALD}"/>'
-    ring = f'<circle cx="66" cy="51" r="4" fill="none" stroke="{EMERALD}"><animate attributeName="r" values="4;12" dur="2.4s" begin="{c.d0 + .6}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="{c.d0 + .6}s" repeatCount="indefinite"/></circle>'
-    c.smil(dot(4) + ring, dot(4))
-    c.text(80, 56, pill, "m500", 12, EMERALD, delay=0.2)
-    c.text(48, 148, CFG["name"], "i800", 60, TEXT, delay=0.3, ls=-1.5)
-    c.add(f'<rect x="48" y="166" width="72" height="4" rx="2" fill="url(#g)"{c.a("sx", 0.6)}/>')
-    c.text(48, 204, CFG["role"].replace("  ·  ", " · "), "m500", 14, CYAN, delay=0.7)
+    c = Card("hero", W, 270, f"{CFG['name']}. {CFG['hero_line']} {CFG['status']}.")
+    c.frame()
+    pill = CFG["status"]
+    dot = lambda r: f'<circle cx="52" cy="52" r="{r}" fill="{EMERALD}"/>'
+    ring = f'<circle cx="52" cy="52" r="3.5" fill="none" stroke="{EMERALD}"><animate attributeName="r" values="3.5;10" dur="2.4s" begin="{c.d0 + .6}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="{c.d0 + .6}s" repeatCount="indefinite"/></circle>'
+    c.smil(dot(3.5) + ring, dot(3.5))
+    c.text(66, 56, pill, "m500", 12, TEXT2, delay=0.2)
+    c.text(48, 128, CFG["name"], "i600", 52, TEXT, delay=0.3, ls=-1.2)
+    c.add(f'<rect x="48" y="146" width="40" height="2" fill="{INDIGO}"{c.a("sx", 0.6)}/>')
+    c.text(48, 182, CFG["role"].replace("  ·  ", " · "), "m500", 13, INDIGO_HI, delay=0.7)
     por = CFG["portrait"]; use_por = por["enabled"] and (ROOT / por["path"]).exists()
     maxw = 520 if use_por else W - 96
-    for i, ln in enumerate(wrap(CFG["hero_line"], "i400", 17, maxw, 2)):
-        c.text(48, 240 + i * 26, ln, "i400", 17, TEXT2, delay=0.9 + i * .1)
+    for i, ln in enumerate(wrap(CFG["hero_line"], "i400", 16, maxw, 2)):
+        c.text(48, 216 + i * 25, ln, "i400", 16, TEXT2, delay=0.9 + i * .1)
     if use_por:
         b64 = base64.b64encode((ROOT / por["path"]).read_bytes()).decode()
-        c.defs.append('<clipPath id="pc"><circle cx="656" cy="150" r="88"/></clipPath>')
-        c.add(f'<g{c.a("fu", 0.5)}><circle cx="656" cy="150" r="95" fill="none" stroke="url(#g)" stroke-width="3"/>'
-              f'<image href="data:image/jpeg;base64,{b64}" x="568" y="62" width="176" height="176" clip-path="url(#pc)" preserveAspectRatio="xMidYMid slice"/></g>')
+        c.defs.append('<clipPath id="pc"><circle cx="656" cy="135" r="80"/></clipPath>')
+        c.add(f'<g{c.a("fu", 0.5)}><circle cx="656" cy="135" r="81" fill="none" stroke="{BORDER}" stroke-width="2"/>'
+              f'<image href="data:image/jpeg;base64,{b64}" x="576" y="55" width="160" height="160" clip-path="url(#pc)" preserveAspectRatio="xMidYMid slice"/></g>')
     return c.render()
 
 # ---- 2. tiles -----------------------------------------------------------------------------
-def tile(i, t, letter):
-    c = Card(f"tile-{t['title'].lower().replace('é', 'e')}", 260, 96, f"{t['title']}: {t['sub']}", delay=0.9 + i * 0.12)
-    c.frame(14)
-    c.add(f'<g{c.a("fu", 0)}><rect x="20" y="28" width="40" height="40" rx="10" fill="{mix(INDIGO, SURFACE, .16)}" stroke="{mix(INDIGO, SURFACE, .4)}"/></g>')
-    c.text(40, 54, letter, "m700", 16, CYAN, anchor="middle", delay=0.05)
-    c.text(76, 47, t["title"], "i600", 18, TEXT, delay=0.1)
-    c.text(76, 67, t["sub"], "m500", 11, MUTED, delay=0.15)
-    arrow = lambda: f'<path d="M-5 5L5 -5M-3 -5H5V3" fill="none" stroke="{TEXT2}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
-    mot = f'<g transform="translate(232 48)"><g>{arrow()}<animateTransform attributeName="transform" type="translate" values="0 0;2 -2;0 0" dur="2.6s" begin="{c.d0 + 1}s" repeatCount="indefinite"/></g></g>'
-    c.smil(mot, f'<g transform="translate(232 48)">{arrow()}</g>')
+def tile(i, t, letter=None):
+    c = Card(f"tile-{t['title'].lower().replace('é', 'e')}", 260, 84, f"{t['title']}: {t['sub']}", delay=0.9 + i * 0.12)
+    c.frame()
+    c.text(24, 38, t["title"], "i600", 17, TEXT, delay=0)
+    c.text(24, 59, t["sub"], "m500", 11, MUTED, delay=0.06)
+    arrow = lambda: f'<path d="M-5 5L5 -5M-3 -5H5V3" fill="none" stroke="{TEXT2}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+    mot = f'<g transform="translate(230 40)"><g>{arrow()}<animateTransform attributeName="transform" type="translate" values="0 0;2 -2;0 0" dur="2.6s" begin="{c.d0 + 1}s" repeatCount="indefinite"/></g></g>'
+    c.smil(mot, f'<g transform="translate(230 40)">{arrow()}</g>')
     return c.render()
 
 # ---- 3. monthly chart + stats -------------------------------------------------------------
 def activity():
     c = Card("activity", W, 372, f"Contributions per month over the last 12 months, {total} in total. Current streak {cur} days, "
              f"{active} active days, busiest day {busiest[0]:%b %d, %Y} with {busiest[1]} contributions.", delay=1.6)
-    c.frame(); c.defs += [GRAD, GRADV]
+    c.frame()
     c.text(40, 52, "Contributions per month", "i600", 18, TEXT)
     c.text(40, 74, f"{total} in the last 12 months{SAMPLE_NOTE}", "m500", 12, MUTED, delay=0.05)
     x0, slot, base, top = 40, 60, 262, 122
     mx = max(1, max(v for *_, v in months)); bw = 34
     for k in range(4):
         gy = base - (base - top) * k / 3
-        c.add(f'<line x1="40" x2="760" y1="{gy:.0f}" y2="{gy:.0f}" stroke="{BORDER}" stroke-dasharray="{"" if k == 0 else "2 5"}"/>')
+        c.add(f'<line x1="40" x2="760" y1="{gy:.0f}" y2="{gy:.0f}" stroke="{BORDER}" />')
     peak = max(range(12), key=lambda i: months[i][2])
     for i, (yy, mm, v) in enumerate(months):
         x = x0 + i * slot + (slot - bw) / 2; h = max(3, (base - top) * v / mx); dl = 0.15 + i * 0.06
-        c.add(f'<rect x="{x:.0f}" y="{base - h:.1f}" width="{bw}" height="{h:.1f}" rx="5" fill="url(#gv)" opacity="{1 if i == peak else .78}"{c.a("gr", dl)}/>')
+        c.add(f'<rect x="{x:.0f}" y="{base - h:.1f}" width="{bw}" height="{h:.1f}" rx="3" fill="{INDIGO}" opacity="{1 if i == peak else .5}"{c.a("gr", dl)}/>')
         c.text(x + bw / 2, base - h - 8, str(v), "m700" if i == peak else "m500", 11, TEXT if i == peak else TEXT2, anchor="middle", delay=dl + .35)
         c.text(x + bw / 2, base + 20, MON[mm - 1], "m500", 11, MUTED, anchor="middle", delay=dl)
     stats = [(f"{cur} day{'s' if cur != 1 else ''}", f"Current streak, longest {longest}"),
@@ -224,32 +218,39 @@ def activity():
     for i, (big, small) in enumerate(stats):
         x = 40 + i * 240 + (i and 12)
         if i: c.add(f'<line x1="{x - 16}" x2="{x - 16}" y1="302" y2="346" stroke="{BORDER}"/>')
-        c.text(x, 326, big, "i800", 24, TEXT, delay=1.0 + i * .12)
+        c.text(x, 326, big, "i600", 24, TEXT, delay=1.0 + i * .12)
         c.text(x, 346, small, "i400", 12, TEXT2, delay=1.05 + i * .12)
     return c.render()
 
 # ---- 4. repo cards ------------------------------------------------------------------------
-def repo(i, r):
+RW = 392  # repo cards sit two per row in the README
+
+def _blurb(r):
+    return DATA.get("repos", {}).get(r["name"], {}).get("description") or r["blurb"]
+
+def repo(i, r, nlines, has_meta):
     meta = DATA.get("repos", {}).get(r["name"], {})
-    blurb = meta.get("description") or r["blurb"]
-    c = Card(f"repo-{r['name'].lower()}", W, 140, f"{r['title']}: {blurb} ({r['stack']})", delay=2.1 + i * 0.18)
-    c.frame(); c.defs.append(GRADV)
-    c.add(f'<g clip-path="url(#cp)"><rect width="4" height="{c.h}" fill="url(#gv)"{c.a("fi", 0)}/></g>')
-    c.text(32, 44, r["title"], "i600", 20, TEXT)
-    for j, ln in enumerate(wrap(blurb, "i400", 14, 736, 2)):
-        c.text(32, 70 + j * 21, ln, "i400", 14, TEXT2, delay=0.08)
-    x, fy = 32, 118
-    if meta.get("language"):
-        col = meta.get("language_color") or INDIGO_HI
-        c.add(f'<circle cx="{x + 5}" cy="{fy - 4}" r="5" fill="{col}"{c.a("fu", .15)}/>')
-        c.text(x + 16, fy, meta["language"], "m500", 12, TEXT2, delay=.15); x += 28 + tw(meta["language"], "m500", 12)
-    c.text(x, fy, r["stack"].replace(" · ", "  ·  "), "m500", 12, MUTED if meta.get("language") else CYAN, delay=.18)
-    right = []
-    if meta.get("stars"): right.append(f"{meta['stars']} stars")
-    if meta.get("forks"): right.append(f"{meta['forks']} forks")
+    blurb = _blurb(r)
+    lines = wrap(blurb, "i400", 13, RW - 48, nlines)
+    h = 64 + 20 * nlines + 40 + (20 if has_meta else 0)
+    c = Card(f"repo-{r['name'].lower()}", RW, h, f"{r['title']}: {blurb} ({r['stack']})", delay=2.1 + (i // 2) * 0.25 + (i % 2) * 0.1)
+    c.frame()
+    c.text(24, 42, r["title"], "i600", 17, TEXT)
+    for j, ln in enumerate(lines):
+        c.text(24, 68 + j * 20, ln, "i400", 13, TEXT2, delay=0.08)
+    fy = h - 22 - (20 if has_meta else 0)
+    c.text(24, fy, r["stack"].replace(" · ", "  ·  "), "m500", 11, INDIGO_HI, delay=.18)
+    bits = []
+    if meta.get("stars"): bits.append(f"{meta['stars']} stars")
+    if meta.get("forks"): bits.append(f"{meta['forks']} forks")
     if meta.get("pushed"):
-        p = dt.date.fromisoformat(meta["pushed"][:10]); right.append(f"updated {MON[p.month - 1]} {p.year}")
-    if right: c.text(W - 32, fy, "  ·  ".join(right), "m500", 11, MUTED, anchor="end", delay=.2)
+        p = dt.date.fromisoformat(meta["pushed"][:10]); bits.append(f"updated {MON[p.month - 1]} {p.year}")
+    if has_meta:
+        x, my = 24, fy + 20
+        if meta.get("language"):
+            c.add(f'<circle cx="{x + 4}" cy="{my - 4}" r="4" fill="{meta.get("language_color") or INDIGO_HI}"{c.a("fu", .2)}/>')
+            c.text(x + 14, my, meta["language"], "m500", 11, TEXT2, delay=.2); x += 26 + tw(meta["language"], "m500", 11)
+        if bits: c.text(x, my, "  ·  ".join(bits), "m500", 11, MUTED, delay=.22)
     return c.render()
 
 # ---- 5. contribution graph ----------------------------------------------------------------
@@ -285,14 +286,16 @@ def graph():
 def main():
     print(f"{'STATIC preview' if STATIC else 'Animated build'} -> {OUT.relative_to(ROOT)}/")
     names = [hero()]
-    for i, (t, l) in enumerate(zip(CFG["tiles"], ["P", "in", "R"])): names.append(tile(i, t, l))
+    for i, t in enumerate(CFG["tiles"]): names.append(tile(i, t))
     names.append(activity())
-    for i, r in enumerate(CFG["repos"]): names.append(repo(i, r))
+    nl = max(len(wrap(_blurb(r), "i400", 13, RW - 48, 4)) for r in CFG["repos"])
+    hm = any(DATA.get("repos", {}).get(r["name"]) for r in CFG["repos"])
+    for i, r in enumerate(CFG["repos"]): names.append(repo(i, r, nl, hm))
     names.append(graph())
     if STATIC:
-        imgs = "".join(f'<img src="{n}.svg">' if not n.startswith("tile") else f'<img src="{n}.svg" width="32.5%">' for n in names)
+        imgs = "".join(f'<img src="{n}.svg" width="{"32.5%" if n.startswith("tile") else "49%"}">' if n.startswith(("tile", "repo")) else f'<img src="{n}.svg">' for n in names)
         (OUT / "index.html").write_text(
-            '<!doctype html><meta charset="utf-8"><body style="background:#0d1117;max-width:830px;margin:24px auto;'
+            '<!doctype html><meta charset="utf-8"><body style="background:#000;max-width:830px;margin:24px auto;'
             'line-height:0"><style>img{display:block;margin:0 auto 14px;max-width:100%}img[width]{display:inline-block;margin:0 .4% 14px}'
             f'</style>{imgs}</body>', encoding="utf-8")
 
