@@ -1,0 +1,66 @@
+{
+  "user": "bhavyapatel0201",
+  "name": "Bhavya Patel",
+  "hero_line": "Master of Applied Computing student at the University of Windsor, building AI/ML and data engineering projects.",
+  "role": "AI/ML  ·  Data Engineering  ·  Systems & Automation",
+  "status": "Open to a 4–8 month co-op from January 2027",
+  "portrait": {
+    "enabled": false,
+    "path": "scripts/assets/portrait.jpg"
+  },
+  "tiles": [
+    {
+      "title": "Portfolio",
+      "sub": "bhavyapatel0201.github.io",
+      "url": "https://bhavyapatel0201.github.io"
+    },
+    {
+      "title": "LinkedIn",
+      "sub": "in/bhavya-patel-data",
+      "url": "https://www.linkedin.com/in/bhavya-patel-data"
+    },
+    {
+      "title": "Résumé",
+      "sub": "Master résumé, PDF",
+      "url": "https://bhavyapatel0201.github.io/assets/Bhavya_Patel_Master_Resume.pdf"
+    }
+  ],
+  "repos": [
+    {
+      "name": "Credit-Card-Fraud-Detection",
+      "title": "Credit Card Fraud Detection",
+      "blurb": "Classifies fraudulent transactions on highly imbalanced data",
+      "stack": "Python · scikit-learn · Jupyter"
+    },
+    {
+      "name": "Adaptive-Warehouse",
+      "title": "Adaptive Sales Data Warehouse",
+      "blurb": "Tests whether workload-aware index and partition tuning beats a static design as query patterns shift",
+      "stack": "PostgreSQL · Python"
+    },
+    {
+      "name": "ResumeExtractor",
+      "title": "Resume Extractor",
+      "blurb": "Resume upload web app that sends resumes to an n8n workflow for extraction, with a Python backend for Word-template output",
+      "stack": "Python · JavaScript · n8n"
+    },
+    {
+      "name": "Transfer-Learning-Object-Classification",
+      "title": "Transfer Learning Object Classification",
+      "blurb": "Classifies kitchenware images by fine-tuning pretrained VGG19 and DenseNet121, with a hyperparameter search and per-class metrics",
+      "stack": "Python · PyTorch"
+    },
+    {
+      "name": "Stereo-Image-Matching-And-Epipolar-Geometry",
+      "title": "Stereo Matching & Epipolar Geometry",
+      "blurb": "Camera calibration, epipolar geometry and sparse 3D reconstruction from stereo images",
+      "stack": "Python · OpenCV"
+    },
+    {
+      "name": "Credit-Card-Comparison-Analysis",
+      "title": "Credit Card Comparison",
+      "blurb": "Group project: Spring Boot app with a Selenium crawler for bank credit card pages, keyword frequency counting and a React dashboard",
+      "stack": "Java · Spring Boot · React · Selenium"
+    }
+  ]
+}
