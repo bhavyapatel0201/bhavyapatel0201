@@ -1,18 +1,18 @@
 <p align="center">
-  <a href="https://github.com/bhavyapatel0201"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:000000,100:555555&height=220&section=header&text=Bhavya%20Patel&fontSize=80&fontColor=FFFFFF&animation=fadeIn&fontAlignY=42&desc=AI%2FML%20%C2%B7%20Data%20Engineering&descSize=24&descAlignY=64" width="100%" alt="Bhavya Patel, AI/ML and Data Engineering" /></a>
-  <img src="https://readme-typing-svg.demolab.com?font=VT323&size=34&duration=2000&pause=1600&color=FFFFFF&background=000000&center=true&vCenter=true&width=854&height=64&lines=%3E+master%27s+student+at+the+university+of+windsor.;%3E+building+ai%2Fml+and+data+engineering+projects.;%3E+open+to+a+co-op+from+january+2027." width="100%" alt="Master's student at the University of Windsor. Building AI/ML and data engineering projects. Open to a co-op from January 2027." />
+  <a href="https://github.com/bhavyapatel0201"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0A0A0A,100:A21517&height=220&section=header&text=Bhavya%20Patel&fontSize=80&fontColor=FFFFFF&animation=fadeIn&fontAlignY=42&desc=AI%2FML%20%C2%B7%20Data%20Engineering&descSize=24&descAlignY=64" width="100%" alt="Bhavya Patel, AI/ML and Data Engineering" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=VT323&size=34&duration=2000&pause=1600&color=E5EE4E&background=0A0A0A&center=true&vCenter=true&width=854&height=64&lines=%3E+master%27s+student+at+the+university+of+windsor.;%3E+building+ai%2Fml+and+data+engineering+projects.;%3E+open+to+a+co-op+from+january+2027." width="100%" alt="Master's student at the University of Windsor. Building AI/ML and data engineering projects. Open to a co-op from January 2027." />
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/bhavya-patel-data"><img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge" alt="LinkedIn" /></a>
-  <a href="https://bhavyapatel0201.github.io"><img src="https://img.shields.io/badge/Portfolio-333333?style=for-the-badge" alt="Portfolio" /></a>
-  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/Email-333333?style=for-the-badge" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/bhavya-patel-data"><img src="https://img.shields.io/badge/LinkedIn-A21517?style=for-the-badge" alt="LinkedIn" /></a>
+  <a href="https://bhavyapatel0201.github.io"><img src="https://img.shields.io/badge/Portfolio-A21517?style=for-the-badge" alt="Portfolio" /></a>
+  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/Email-A21517?style=for-the-badge" alt="Email" /></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/96%25%2B-CNN_plant_disease_accuracy-D4D4D4?style=for-the-badge&labelColor=000000" alt="96%+ accuracy on a CNN plant disease detector" />
-  <img src="https://img.shields.io/badge/6-featured_projects-D4D4D4?style=for-the-badge&labelColor=000000" alt="6 featured projects" />
-  <img src="https://img.shields.io/badge/Jan_2027-co--op_start-D4D4D4?style=for-the-badge&labelColor=000000" alt="Available for a co-op from January 2027" />
+  <img src="https://img.shields.io/badge/96%25%2B-CNN_plant_disease_accuracy-ECBDD8?style=for-the-badge&labelColor=0A0A0A" alt="96%+ accuracy on a CNN plant disease detector" />
+  <img src="https://img.shields.io/badge/6-featured_projects-ECBDD8?style=for-the-badge&labelColor=0A0A0A" alt="6 featured projects" />
+  <img src="https://img.shields.io/badge/Jan_2027-co--op_start-ECBDD8?style=for-the-badge&labelColor=0A0A0A" alt="Available for a co-op from January 2027" />
 </p>
 
 ## 🧬 about
@@ -94,31 +94,18 @@ me = {
   </tr>
 </table>
 
-<p align="center"><a href="https://github.com/bhavyapatel0201?tab=repositories"><img src="https://img.shields.io/badge/more_on_github-333333?style=for-the-badge" alt="More repositories on GitHub" /></a></p>
+<p align="center"><a href="https://github.com/bhavyapatel0201?tab=repositories"><img src="https://img.shields.io/badge/more_on_github-A21517?style=for-the-badge" alt="More repositories on GitHub" /></a></p>
 
 ## 🧰 stack
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-333333?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-333333?style=flat-square" alt="Java" />
-  <img src="https://img.shields.io/badge/JavaScript-333333?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/PostgreSQL-333333?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Pandas-333333?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/NumPy-333333?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/PyTorch-333333?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-333333?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/scikit--learn-333333?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/OpenCV-333333?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/Docker-333333?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Git-333333?style=flat-square&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-333333?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Linux-333333?style=flat-square&logo=linux&logoColor=white" alt="Linux" />
+  <img src="https://skillicons.dev/icons?i=py,java,js,postgres,pandas,numpy,pytorch,tensorflow,sklearn,opencv,docker,git,github,linux&perline=14&theme=dark" alt="Python, Java, JavaScript, PostgreSQL, Pandas, NumPy, PyTorch, TensorFlow, scikit-learn, OpenCV, Docker, Git, GitHub, Linux" />
 </p>
 
 <p align="center"><b>Working on something in AI/ML or data engineering? I'd love to hear about it.</b></p>
 
 <p align="center">
-  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/say_hi-333333?style=for-the-badge" alt="Email me" /></a>
+  <a href="mailto:bhavyapatel0201@gmail.com"><img src="https://img.shields.io/badge/say_hi-A21517?style=for-the-badge" alt="Email me" /></a>
 </p>
 
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:555555,100:000000&height=90&section=footer&text=open%20to%20a%20co-op%20from%20january%202027&fontSize=30&fontColor=FFFFFF&fontAlignY=52" width="100%" alt="Open to a co-op from January 2027" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rounded&color=0:A21517,100:0A0A0A&height=90&section=footer&text=open%20to%20a%20co-op%20from%20january%202027&fontSize=30&fontColor=FFFFFF&fontAlignY=52" width="100%" alt="Open to a co-op from January 2027" /></p>
