@@ -107,6 +107,6 @@ More on my [repositories page](https://github.com/bhavyapatel0201?tab=repositori
 
 ---
 
-## Get in touch
+## GET IN TOUCH
 
 Working on something in AI/ML or data engineering? Reach out through any of the links at the top.
