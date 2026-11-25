@@ -338,6 +338,22 @@ def graph():
     c.text(W - 30 + 4, ly + 9, "More", "m500", 11, MUTED, anchor="end", cls="fi", delay=2.2)
     return c.render()
 
+# ---- 6. contact banner --------------------------------------------------------------------
+def contact():
+    head = "Building something in AI/ML or data engineering?"
+    c = Card("contact", W, 146, f"{head} Send me a note.", delay=0.2)
+    c.frame()
+    lines = wrap(head, "i600", 28, W - 96, 2)
+    for i, ln in enumerate(lines):
+        c.text(48, 62 + i * 36, ln, "i600", 28, TEXT, delay=0.1 + i * .12, ls=-0.4)
+    cx = 48 + tw(lines[-1], "i600", 28, -0.4) + 8; cy = 62 + (len(lines) - 1) * 36
+    cur = lambda o: f'<rect x="{cx:.0f}" y="{cy - 24}" width="3" height="28" fill="{INDIGO_HI}" opacity="{o}"/>'
+    blink = f'<rect x="{cx:.0f}" y="{cy - 24}" width="3" height="28" fill="{INDIGO_HI}"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.1s" begin="{c.d0 + .8}s" repeatCount="indefinite"/></rect>'
+    c.smil(blink, cur(1))
+    c.add(f'<rect x="48" y="{cy + 18}" width="40" height="2" fill="{INDIGO}"{c.a("sx", .7)}/>')
+    c.text(48, cy + 50, "Send me a note or connect. Tell me what you are working on.", "i400", 15, TEXT2, delay=0.9)
+    return c.render()
+
 # ---- build --------------------------------------------------------------------------------
 def main():
     print(f"{'STATIC preview' if STATIC else 'Animated build'} -> {OUT.relative_to(ROOT)}/")
@@ -349,6 +365,7 @@ def main():
     hm = any(DATA.get("repos", {}).get(r["name"]) for r in CFG["repos"])
     for i, r in enumerate(CFG["repos"]): names.append(repo(i, r, nl, hm))
     names.append(graph())
+    names.append(contact())
     if STATIC:
         imgs = "".join(f'<img src="{n}.svg" width="{"32.5%" if n.startswith("tile") else "49%"}">' if n.startswith(("tile", "repo")) else f'<img src="{n}.svg">' for n in names)
         (OUT / "index.html").write_text(

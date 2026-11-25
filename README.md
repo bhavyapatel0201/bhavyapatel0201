@@ -109,4 +109,12 @@ More on my [repositories page](https://github.com/bhavyapatel0201?tab=repositori
 
 ## Get in touch
 
-Working on something in AI/ML or data engineering? Reach out through any of the links at the top.
+<p align="center">
+  <img width="100%" src="cards/contact.svg" alt="Building something in AI/ML or data engineering? Send me a note or connect." />
+</p>
+
+<p align="center">
+  <a href="mailto:bhavyapatel0201@gmail.com"><img src="cards/tile-email.svg" width="32.5%" alt="Email: bhavyapatel0201@gmail.com" /></a>
+  <a href="https://www.linkedin.com/in/bhavya-patel-data"><img src="cards/tile-linkedin.svg" width="32.5%" alt="LinkedIn: in/bhavya-patel-data" /></a>
+  <a href="https://bhavyapatel0201.github.io/assets/Bhavya_Patel_Master_Resume.pdf"><img src="cards/tile-resume.svg" width="32.5%" alt="Résumé: master résumé, PDF" /></a>
+</p>
