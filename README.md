@@ -31,47 +31,49 @@ I like projects where data, models and software have to work together: a classif
 <table>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Credit-Card-Fraud-Detection">Credit Card Fraud Detection</a></b><br />
-      <sub>Machine learning</sub>
-      <p>Classifies fraudulent transactions on highly imbalanced data.</p>
-      <sub>Python · scikit-learn · Jupyter</sub>
+      <b><a href="https://github.com/bhavyapatel0201/f1-race-dashboard">F1 Race Data Dashboard and Winner Predictor</a></b><br />
+      <sub>Data science</sub>
+      <p>Streamlit dashboard on real Formula 1 data, plus a race-winner model with leak-free features, walk-forward validation and a held-out test season.</p>
+      <sub>Python · Streamlit · Plotly · pandas</sub>
     </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/bhavyapatel0201/retail-analytics-platform">Retail Analytics Platform</a></b><br />
+      <sub>Data engineering</sub>
+      <p>dbt and DuckDB pipeline on the Olist e-commerce dataset: raw loader and tested staging layer done, marts in progress.</p>
+      <sub>dbt · DuckDB · SQL · Python</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/bhavyapatel0201/ketana-drishti">Ketana Drishti</a></b><br />
+      <sub>Applied AI</sub>
+      <p>Vedic astrology that computes first and interprets second: an ephemeris engine builds the chart, and an LLM only explains the facts it is given.</p>
+      <sub>Python · LLM</sub>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/bhavyapatel0201/kitsune-nids">Kitsune NIDS</a></b><br />
+      <sub>Team project, machine learning</sub>
+      <p>Online network intrusion detector using damped per-host statistics and an autoencoder ensemble. I built the lab: VM setup, benign traffic and attack scripts.</p>
+      <sub>Python · autoencoders · pytest</sub>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <b><a href="https://github.com/bhavyapatel0201/Adaptive-Warehouse">Adaptive Sales Data Warehouse</a></b><br />
       <sub>Data engineering</sub>
       <p>Tests whether workload-aware index and partition tuning beats a static design as query patterns shift.</p>
       <sub>PostgreSQL · Python</sub>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <b><a href="https://github.com/bhavyapatel0201/ResumeExtractor">Resume Extractor</a></b><br />
       <sub>Automation</sub>
       <p>Resume upload web app that sends resumes to an n8n workflow for extraction, with a Python backend for Word-template output.</p>
       <sub>Python · JavaScript · n8n</sub>
     </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification">Transfer Learning Object Classification</a></b><br />
-      <sub>Deep learning</sub>
-      <p>Classifies kitchenware images by fine-tuning pretrained VGG19 and DenseNet121, with a hyperparameter search and per-class metrics.</p>
-      <sub>Python · PyTorch</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Stereo-Image-Matching-And-Epipolar-Geometry">Stereo Matching &amp; Epipolar Geometry</a></b><br />
-      <sub>Computer vision</sub>
-      <p>Camera calibration, epipolar geometry and sparse 3D reconstruction from stereo images.</p>
-      <sub>Python · OpenCV</sub>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis">Credit Card Comparison</a></b><br />
-      <sub>Group project</sub>
-      <p>Spring Boot app with a Selenium crawler for bank credit card pages, keyword frequency counting and a React dashboard.</p>
-      <sub>Java · Spring Boot · React · Selenium</sub>
-    </td>
   </tr>
 </table>
+
+More on my [repositories page](https://github.com/bhavyapatel0201?tab=repositories).
 
 ---
 
@@ -79,9 +81,9 @@ I like projects where data, models and software have to work together: a classif
 
 <table align="center">
   <tr><td align="center" width="150"><b>Languages</b></td><td><img alt="Python, Java, JavaScript, HTML, CSS, Bash" src="https://skillicons.dev/icons?i=py,java,js,html,css,bash&theme=dark" /> <img alt="SQL" src="https://img.shields.io/badge/SQL-333333?style=flat-square&logo=postgresql&logoColor=white" /></td></tr>
-  <tr><td align="center" width="150"><b>Data and analysis</b></td><td><img alt="PostgreSQL, pandas, NumPy, Matplotlib" src="https://skillicons.dev/icons?i=postgres,pandas,numpy,matplotlib&theme=dark" /> <img alt="Seaborn" src="https://img.shields.io/badge/Seaborn-333333?style=flat-square" /> <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-333333?style=flat-square&logo=jupyter&logoColor=white" /></td></tr>
+  <tr><td align="center" width="150"><b>Data and analysis</b></td><td><img alt="PostgreSQL, pandas, NumPy, Matplotlib" src="https://skillicons.dev/icons?i=postgres,pandas,numpy,matplotlib&theme=dark" /> <img alt="dbt" src="https://img.shields.io/badge/dbt-333333?style=flat-square&logo=dbt&logoColor=white" /> <img alt="DuckDB" src="https://img.shields.io/badge/DuckDB-333333?style=flat-square&logo=duckdb&logoColor=white" /> <img alt="Seaborn" src="https://img.shields.io/badge/Seaborn-333333?style=flat-square" /> <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-333333?style=flat-square&logo=jupyter&logoColor=white" /></td></tr>
   <tr><td align="center" width="150"><b>ML and vision</b></td><td><img alt="PyTorch, TensorFlow, scikit-learn, OpenCV" src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" /> <img alt="XGBoost" src="https://img.shields.io/badge/XGBoost-333333?style=flat-square" /></td></tr>
-  <tr><td align="center" width="150"><b>Web and backend</b></td><td><img alt="Node.js, Django, Flask, FastAPI, Spring, React" src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi,spring,react&theme=dark" /> <img alt="REST_APIs" src="https://img.shields.io/badge/REST_APIs-333333?style=flat-square" /></td></tr>
+  <tr><td align="center" width="150"><b>Web and backend</b></td><td><img alt="Node.js, Django, Flask, FastAPI, Spring, React" src="https://skillicons.dev/icons?i=nodejs,django,flask,fastapi,spring,react&theme=dark" /> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-333333?style=flat-square&logo=streamlit&logoColor=white" /> <img alt="REST_APIs" src="https://img.shields.io/badge/REST_APIs-333333?style=flat-square" /></td></tr>
   <tr><td align="center" width="150"><b>Automation</b></td><td><img alt="n8n" src="https://img.shields.io/badge/n8n-333333?style=flat-square&logo=n8n&logoColor=white" /> <img alt="Selenium" src="https://img.shields.io/badge/Selenium-333333?style=flat-square&logo=selenium&logoColor=white" /></td></tr>
   <tr><td align="center" width="150"><b>Workflow and deploy</b></td><td><img alt="Docker, Git, GitHub, Linux, VS Code" src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode&theme=dark" /> <img alt="Render" src="https://img.shields.io/badge/Render-333333?style=flat-square&logo=render&logoColor=white" /></td></tr>
 </table>
