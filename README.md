@@ -107,7 +107,7 @@ More on my [repositories page](https://github.com/bhavyapatel0201?tab=repositori
 
 ---
 
-
+## Get in touch
 
 <p align="center">
   <img width="100%" src="cards/contact.svg" alt="Building something in AI/ML or data engineering? Send me a note or connect." />
